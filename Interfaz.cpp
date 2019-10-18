@@ -10,7 +10,8 @@ Interfaz menu1;
 void Interfaz::correrInterfaz() {
 int opc;
  string nombreSocio; int cedulaSocio; string correoSocio; int telefonoSocio; float fechainscripcionSocio;
- string nombreInstuct; int cedulaInstruct; string correoInstruct; int telefonoInstruct; float fechainscripcionInstruct;
+ string nombreInstuct; int cedulaInstruct; string correoInstruct; int telefonoInstruct; 
+ float fechaInicio; float fechaVencimiento; string objetivo; int partedelCuerpo; string nombreEjercicio; int series; int repeticiones;
     do{
     cout<<"++++++++++++++++++++++++++++++++++++++\n";
 	cout<<"+            MENU PRINCIPAL          +\n";
@@ -58,8 +59,6 @@ int opc;
         cin>>correoInstruct;
         cout<<"Digita el numero telefonico del instructor\n";
         cin>>telefonoInstruct;
-        cout<<"Digita la fecha de inscripcion\n";
-        cin>>fechainscripcionInstruct;
         cout<<"Ingrese una tecla y enter para continuar..."\n;
 		cin>>x;
      }break;
@@ -68,11 +67,11 @@ int opc;
         cout<<"++++++++++++++++++++++++++++++++++++++\n";
         cout<<"Listas de Socios\n";
         cout<<"++++++++++++++++++++++++++++++++++++++\n";
-        cout<<"ID\n";
+        cout<<"ID:\n";
         cout<<get.cedulaSocio;
-        cout<<"Nombre\n";
+        cout<<"Nombre:\n";
         cout<<get.nombreSocio;
-        cout<<"Instructor\n";
+        cout<<"Instructor:\n";
         cout<<get.nombreInstruct;
         cout<<"Ingrese una tecla y enter para continuar..."\n;
 		cin>>x;
@@ -82,9 +81,9 @@ int opc;
         cout<<"++++++++++++++++++++++++++++++++++++++\n";
         cout<<"Listas de Instructores\n";
         cout<<"++++++++++++++++++++++++++++++++++++++\n";
-        cout<<"ID\n";
+        cout<<"ID:\n";
         cout<<get.cedulaInstruct;
-        cout<<"Nombre\n";
+        cout<<"Nombre:\n";
         cout<<get.nombreInstruct;
         cout<<"Ingrese una tecla y enter para continuar..."\n;
 		cin>>x;
@@ -94,15 +93,17 @@ int opc;
         cout<<"++++++++++++++++++++++++++++++++++++++\n";
         cout<<"Resultados de perdida de grasa\n";
         cout<<"++++++++++++++++++++++++++++++++++++++\n";
-        cout<<"ID\n";
+        cout<<"ID:\n";
         cout<<get.cedulaSocio;
-        cout<<"Nombre\n";
+        cout<<"Nombre:\n";
         cout<<get.nombreSocio;
-        cout<<"Perdida de grasa\n";
+        cout<<"Perdida de grasa:\n";
         cout<<get.perdidaDeGrasa;
         cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
      }break;
+
+
      case 6:{
         char x;
         cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
@@ -112,6 +113,8 @@ int opc;
         cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
      }break;
+
+
      case 7:{
          do{
         cout<<"1 - Socios por instructor\n";
@@ -125,26 +128,64 @@ int opc;
         cin>>opc;
         system("cls");
         switch (opc){
+
+
         case 1:{
         char x;
         cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
         cout<<"Socios por instructor\n";
         cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
-        cout<<"ID instructor\n";
+        cout<<"ID instructor:\n";
         cout<<get.nombreInstruct;
-        cout<<"Nombre\n";
+        cout<<"Nombre:\n";
         cout<<get.nombreInstruct;
-        cout<<
+        cout<<"Lista de socios:\n";
+        cout<<menu1.instructor[];
          cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
         }break;
+
+
          case 2:{
         char x;
+        cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+        cout<<"Asignación de rutina\n";
+        cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+        cout<<"ID Socio:\n";
+        cin>>cedulaSocio;
+        cout<<"Nombre del socio:\n";
+        cout<<menu1.Buscarsocio;
+        cout<<"Rutina numero:\n";
+        cout<<menu1.asignaRutina;
+        cout<<"Fecha de Inicio:\n";
+        cin>>fechaInicio;
+        cout<<"Fecha de Vencimiento:\n";
+        cin>>fechaVencimiento;
+        cout<<"Objetivo:\n";
+        cin>>objetivo;
+        cout<<"Parte del cuerpo:(1-Pierna, 2-Pecho, 3-espalda, 4-hombro ,5-tríceps, 6-biceps, 7-trapecio, 8-antebrazo)\n";
+        cin>>partedelCuerpo;
+        cout<<"Nombre del Ejercicio:\n";
+        cin>>nombreEjercicio;
+        cout<<"Series:\n";
+        cin>>series;
+        cout<<"Repeticiones:\n";
+        cin>>repeticiones;
+        cout<<menu1.stringtoString();
         cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
         }break;
         case 3:{
         char x;
+        cout<<"Digita el ID del Socio\n";
+        cin>>cedulaSocio;
+        cout<<"Nombre del socio:\n";
+        cout<<menu1.BuscarSocio();
+        cout<<"Nombre del instructor:\n";
+        cout<<menu1.BuscarInstructor();
+
+
+
         cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
         }break;
