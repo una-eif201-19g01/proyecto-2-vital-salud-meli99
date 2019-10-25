@@ -2,20 +2,22 @@
 #define INSTRUCTORES_H
 
 #include<iostream>
-#include "Personas.h"
 using namespace std;
 
-class Instructores : public Personas{
+class Instructores{
     public:
         Instructores();
         Instructores(int cantidad, int tamano);
-        Instructores(int cantidad, int tamano, int vector);
+        Instructores(int cantidad, int tamano, string vector);
         string toString();
+        string getInstructor()
 
-    private:
         int tamano;
-        int cantidad;
-        string vector; 
+        int cantidadSocios;
+        string vectorInstructores; 
+        string vectorSocios;
+        string nombre;
+        string cedula;
 
         int getTamano();
         void setTamano(int tamano);

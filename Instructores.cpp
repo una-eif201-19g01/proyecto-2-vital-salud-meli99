@@ -2,27 +2,27 @@
 #include "Personas.h"
 
 Instructores::Instructores() {
-    cantidad = 0;
+    cantidadSocios = 0;
     tamano = 99;
 
     for (int i = 0; i<tamano; i++) {
-        vector[i] = "";
+        vectorInstructores[i] = "";
     }
 }
 
 Instructores::Instructores(int cantidad, int tamano) {
-    cantidad = Instructores::cantidad;
+    cantidadSocios = Instructores::cantidadSocios;
     tamano = Instructores::tamano;
 
     for (int i = 0; i<tamano; i++) {
-        vector[i] = "";
+        vectorInstructores[i] = "";
     }
 }
 
 Instructores::Instructores(int cantidad, int tamano, string vector) {
     Instructores::cantidad = cantidad;
     Instructores::tamano = tamano;
-    Instructores::vector = vector;
+    Instructores::vectorInstructores = vector;
 }
 
 int Instructores::getTamano() {
@@ -34,14 +34,23 @@ void Instructores::setTamano(int tamano) {
 }
 
 int Instructores::getCantidad() {
-    return cantidad;
+    return cantidadSocios;
 }
 
 void Instructores::setCantidad(int cantidad) {
-    Instructores::cantidad = cantidad;
+    Instructores::cantidadSocios = cantidad;
 }
 
 void Instructores::asignarSocio(string idSocio) {
-    vector[cantidad] = idSocio;
-    cantidad++;
+    vectorSocios[cantidadSocios] = idSocio;
+    cantidadSocios++;
+}
+
+string Instructores::getInstructor() {
+    for (int i = 0; i < tamano; i++) {
+        vectorInstructores[i] = "Nombre: " + nombre + "\nCédula: " + cedula + "\nSocios: ";
+        for (int j = 0; j < cantidadSocios; j++) {
+            socio[]
+        }
+    }
 }
