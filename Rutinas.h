@@ -1,5 +1,4 @@
-int asignaRutina();
-string toString();
+
 
 //set & get
 void setfechaInicio(float);
@@ -16,3 +15,7 @@ void setseries(int);
 int getseries();
 void setrepeticiones(int);
 int getrepeticiones();
+
+// methods
+int asignaRutina();
+string toString();

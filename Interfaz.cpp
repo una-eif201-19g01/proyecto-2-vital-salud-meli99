@@ -127,9 +127,8 @@ int opc;
         cout<<"8 - Regresar menú principal\n";
         cin>>opc;
         system("cls");
+
         switch (opc){
-
-
         case 1:{
         char x;
         cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
@@ -175,6 +174,8 @@ int opc;
         cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
         }break;
+
+
         case 3:{
         char x;
         cout<<"Digita el ID del Socio\n";
@@ -183,29 +184,60 @@ int opc;
         cout<<menu1.BuscarSocio();
         cout<<"Nombre del instructor:\n";
         cout<<menu1.BuscarInstructor();
-
-
-
+        cout<<"Clases Grupales:\n";
+        cout<<menu1.
+        cout<<"Historial de rutinas:\n";
+        cout<<menu1.
         cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
         }break;
+
+
         case 4:{
         char x;
+        cout<<"Digita el ID del Instructor\n";
+        cin>>cedulaInstruct;
+        cout<<"Nombre del socio:\n";
+        cout<<menu1.BuscarInstructor();
+        cout<<"Rutinas vencidas:\n";
+        cout<<menu1.
         cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
         }break;
+
+
         case 5:{
         char x;
+        cout<<"Digita el ID de la rutina\n";
+        cin>>rutina;
         cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
         }break;
+
+
         case 6:{
         char x;
+        cout<<"Digita el ID del Socio\n";
+        cin>>cedulaSocio;
+        cout<<"Nombre del socio:\n";
+        cout<<menu1.BuscarSocio();
+        cout<<"Digite el peso en kilos:\n";
+        cin>>peso;
+        cout<<"Digite la altura en metros:\n";
+        cin>>altura;
+        cout<<"Digite el porcentje de grasa:\n";
+        cin>>porcentajeGrasa;
         cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
         }break;
+
+
         case 7:{
         char x;
+        cout<<"Digita el ID del Socio\n";
+        cin>>cedulaSocio;
+        cout<<"Nombre del socio:\n";
+        cout<<menu1.BuscarSocio();
         cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
         }break;}
@@ -215,9 +247,55 @@ int opc;
      }}
      case 8:{
         char x;
+         do{
+    cout<<"++++++++++++++++++++++++++++++++++++++\n";
+	cout<<"+            MENU CLASES GRUPALES    +\n";
+	cout<<"++++++++++++++++++++++++++++++++++++++\n";
+    cout << "1-  Creacion de la clase grupal\n";
+    cout << "2-  Visualizacion de las clases grupales\n";
+    cout << "3-  Matriculas Socio\n";
+    cout << "4-  Regresar al menú principal\n";
+    cin>>opc;
+    system("cls");
+ switch(opc){
+     case 1:{
+        char x;
+        cout<<"Digite el salón deseado(A,B,C):\n";
+        cin>>salon;
+        cout<<menu1.
+        cout<<"Ingrese una tecla y enter para continuar...\n";
+		cin>>x;
+     }break;
+
+
+      case 2:{
+        char x;
+        cout<<"Digite el ID de la clase:\n";
+        cin>>leccion;
+        cout<<menu1.
+        cout>>"Socios Matriculados:\n";
+        cout<<menu1.
+        cout<<"Ingrese una tecla y enter para continuar...\n";
+		cin>>x;
+     }break;
+
+
+      case 3:{
+        char x;
+        cout<<"Digite el ID de la clase:\n";
+        cin>>leccion;
+        cout<<menu1.
+        cout<<"Digita el ID del socio:\n";
+        cin>>cedulaSocio;
+        cout<<"Nombre dek socio:\n";
+        cout<<menu1.BuscarSocio();
+
         cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
      }break;}
+     }while (opc==4){
+         cout<<"Volviendo\n";
+     } 
      system("cls");
     }while(opc==9){
         cout<<"Adios\n";
