@@ -44,5 +44,6 @@ class Personas{
 
     //metodos
         string toString();
+        int perdidaGrasa(int pesoActual);
 
 #endif

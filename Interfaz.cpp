@@ -10,6 +10,7 @@ Interfaz menu1;
 void Interfaz::correrInterfaz() {
 int opc;
  string nombreSocio; int cedulaSocio; string correoSocio; int telefonoSocio; float fechainscripcionSocio;
+ int pesoActual;
  string nombreInstuct; int cedulaInstruct; string correoInstruct; int telefonoInstruct; 
  float fechaInicio; float fechaVencimiento; string objetivo; int partedelCuerpo; string nombreEjercicio; int series; int repeticiones;
     do{
@@ -93,12 +94,13 @@ int opc;
         cout<<"++++++++++++++++++++++++++++++++++++++\n";
         cout<<"Resultados de perdida de grasa\n";
         cout<<"++++++++++++++++++++++++++++++++++++++\n";
-        cout<<"ID:\n";
-        cout<<get.cedulaSocio;
-        cout<<"Nombre:\n";
-        cout<<get.nombreSocio;
-        cout<<"Perdida de grasa:\n";
-        cout<<get.perdidaDeGrasa;
+        cout<<"Digite el ID del socio:\n";
+        cin>>cedulaSocio;
+        cout<<menu1.buscarSocio(cedulaSocio);
+        cout<<"Digite el peso actual:\n";
+        cin>>pesoActual;
+        cout<<"La perdida de peso es de:\n";
+        cout<<menu1.perdidaGrada(pesoActual)
         cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
      }break;
@@ -109,7 +111,8 @@ int opc;
         cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
         cout<<"Instructor con mejores resultados en pérdida de grasa\n";
         cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
-        cout<<menu1.perdidaGrasa();
+        cout<<"El instructor con mejores resultados es: \n";
+        cout<<menu1.mejoresPesos();
         cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
      }break;

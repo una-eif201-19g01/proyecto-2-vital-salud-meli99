@@ -81,6 +81,9 @@
             per<<"La masa muscular del Socio es: "<<masaMuscularSocio<<endl;
             return per.str();
         }
+         int perdidaGrasa(int pesoActual){
+             return(pesoSocio - pesoActual);
+         }
     };
 
 #endif
