@@ -81,9 +81,6 @@
             per<<"La masa muscular del Socio es: "<<masaMuscularSocio<<endl;
             return per.str();
         }
-        string Personas::BuscarSocio(int cedulaSocio){
-
-        }
     };
 
 #endif

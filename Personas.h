@@ -44,7 +44,5 @@ class Personas{
 
     //metodos
         string toString();
-        string BuscarSocio(int cedulaSocio);
-    };
 
 #endif
