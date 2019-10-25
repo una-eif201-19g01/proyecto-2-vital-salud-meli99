@@ -49,13 +49,13 @@ int opc;
      case 2:{
         char x;
         cout<<"++++++++++++++++++++++++++++++++++++++\n";
-        cout<<"Solicituda de nuevos insturctores\n";
+        cout<<"Solicitud a de nuevos insturctores\n";
         cout<<"++++++++++++++++++++++++++++++++++++++\n";
         cout<<"Digita el nombre completo del instructor\n";
         cin>>nombreInstuct;
         cout<<"Digita el numero de cedula\n";
         cin>>cedulaInstruct;
-        cout<<"Digita elo correo electronico del instructor\n";
+        cout<<"Digita el correo electronico del instructor\n";
         cin>>correoInstruct;
         cout<<"Digita el numero telefonico del instructor\n";
         cin>>telefonoInstruct;
