@@ -1,32 +1,50 @@
-//socios
-void setcedulaSocio(int);
-int getcedulaSocio();
-void setnombreSocio(string);
-string getnombreSocio();
-void setcorreoSocio(string);
-string getcorreoSocio();
-void settelefonoSocio(int);
-int gettelefonoSocio();
-void setfechainscripcionSocio(float);
-float getfechainscripcionSocio();
-void setpesoSocio(int);
-int getpesoocio();
-void setMasaCorporalSocio(int);
-int getMasaCorporalSocio();
-void setmasaMuscularSocio(int);
-int getmasaMuscularSocio();
+#ifndef PERSONAS_H
+#define PERSONAS_H
 
-//instructores
-void setcedulaInstruct(int);
-int getcedulaInstruct();
-void setnombreInstruct(string);
-string getnombreInstruct();
-void setcorreoInstruct(string);
-string getcorreoInstruct();
-void settelefonoInstruct(int);
-int gettelefonoInstruct();
+#include<iostream>
+using namespace std;
 
+class Personas{
+   private:
+        string nombreSocio;
+        int cedulaSocio;
+        string correoSocio;
+        int telefonoSocio;
+        float fechaInscripcionSocio;
+        int pesoSocio;
+        int masaCorporalSocio;
+        int masaMuscularSocio;
+ public:
+       Personas();      
 
-//metodos
-string BuscarSocio();
-string BuscarInstructor();
+        void setnombreSocio(string nombreSocio);
+        string getnombreSocio();
+
+        void setcedulaSocio(int cedulaSocio);
+        int getcedulaSocio();
+
+        void setcorreoSocio(string correoSocio);
+        string getcorreoSocio();
+
+        void settelefonoSocio(int telefonoSocio);
+        int gettelefonoSocio();
+
+        void setfechaInscripcionSocio(float fechaInscripcionSocio);
+        float getfechaInscripcionSocio();
+
+        void setpesoSocio(int pesoSocio);
+        int getpesoSocio();
+
+        void setmasaCorporalSocio(int masaCorporalSocio);
+        int getmasaCorporalSocio();
+
+        void setmasaMuscularSocio(int masaMuscularSocio);
+        int getmasaMuscularSocio();
+        
+
+    //metodos
+        string toString();
+        string BuscarSocio(int cedulaSocio);
+    };
+
+#endif
