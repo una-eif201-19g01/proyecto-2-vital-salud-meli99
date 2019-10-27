@@ -46,7 +46,7 @@ void Instructores::asignarSocio(string idSocio) {
     cantidadSocios++;
 }
 
-void Instructores::addSocio(Persona socio) {
+void Instructores::addSocio(Personas socio) {
     cantidadSocios++;
 
     vectorInstructores[cantidadSocios] = socio;
