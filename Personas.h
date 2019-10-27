@@ -14,6 +14,7 @@ class Personas{
         int pesoSocio;
         int masaCorporalSocio;
         int masaMuscularSocio;
+        float perdidaDeGrasa;
  public:
        Personas();      
 
@@ -40,10 +41,12 @@ class Personas{
 
         void setmasaMuscularSocio(int masaMuscularSocio);
         int getmasaMuscularSocio();
+
+        float getPerdidaGrasa();
         
 
     //metodos
         string toString();
-        int perdidaGrasa(int pesoActual);
-
+        float perdidaGrasa(int pesoActual);
+};
 #endif

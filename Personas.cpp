@@ -66,6 +66,10 @@
         int Personas::getmasaMuscularSocio(){
             return masaMuscularSocio;
         }
+
+        float Personas::getPerdidaGrasa() {
+            return perdidaDeGrasa;
+        }
         
 
     //metodos
@@ -81,7 +85,8 @@
             per<<"La masa muscular del Socio es: "<<masaMuscularSocio<<endl;
             return per.str();
         }
-         int perdidaGrasa(int pesoActual){
+         float Personas::perdidaGrasa(int pesoActual){
+             perdidaDeGrasa = pesoSocio - pesoActual;
              return(pesoSocio - pesoActual);
          }
     };
