@@ -30,6 +30,8 @@ int opc;
     system("cls");
  switch(opc){
      case 1:{
+         Personas *socio;
+
         char x;
         cout<<"++++++++++++++++++++++++++++++++++++++\n";
         cout<<"Solicituda de nuevos socios\n";
