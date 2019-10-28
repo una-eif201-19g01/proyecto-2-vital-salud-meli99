@@ -62,6 +62,8 @@ int opc;
 		cin>>x;
      }break;
      case 2:{
+         Instructores instructor;
+
         char x;
         cout<<"++++++++++++++++++++++++++++++++++++++\n";
         cout<<"Solicitud a de nuevos insturctores\n";
@@ -74,7 +76,17 @@ int opc;
         cin>>correoInstruct;
         cout<<"Digita el numero telefonico del instructor\n";
         cin>>telefonoInstruct;
-        cout<<"Ingrese una tecla y enter para continuar..."\n;
+        cout<<"Digita el id del instructor\n";
+        cin>>idInstructor;
+        cout<<"Ingrese una tecla y enter para continuar...\n";
+
+        instructor.setNombre(nombreInstuct);
+        instructor.setCedula(cedulaInstruct);
+        instructor.setCorreo(correoInstruct);
+        instructor.setTelefono(telefonoInstruct);
+        instructor.setId(idInstructor);
+
+        listaInstructores->insertarFinal(instructor);
 		cin>>x;
      }break;
      case 3:{

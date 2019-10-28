@@ -12,8 +12,11 @@ class Instructores{
         // Personas *vectorInstructores; 
         string vectorSocios;
         string nombre;
-        string cedula;
         int id;
+        int cedula;
+        string correo;
+        int telefono;
+
         Personas *vectorInstructores;
 
     public:
@@ -22,10 +25,19 @@ class Instructores{
         Instructores(int cantidad, int tamano, string vector);
         string toString();
         string getInstructor();
-        int getId();
+
 
        
-
+        int getId();
+        void setId(int id);
+        string getNombre();
+        void setNombre(string nombre);
+        int getCedula();
+        void setCedula(int cedula);
+        string getCorreo();
+        void setCorreo(string correo);
+        int getTelefono();
+        void setTelefono(int telefono);
         int getTamano();
         void setTamano(int tamano);
         int getCantidad();

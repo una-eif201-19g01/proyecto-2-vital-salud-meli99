@@ -46,6 +46,42 @@ int Instructores::getId() {
     return id;
 }
 
+void Instructores::setId(int id) {
+    Instructores::id = id;
+}
+
+string Instructores::getNombre() {
+    return nombre;
+}
+
+void Instructores::setNombre(string nombre) {
+    Instructores::nombre = nombre;
+}
+
+int Instructores::getCedula() {
+    return cedula;
+}
+
+void Instructores::setCedula(int cedula) {
+    Instructores::cedula = cedula;
+}
+
+string Instructores::getCorreo() {
+    return correo;
+}
+
+void Instructores::setCorreo(string correo) {
+    Instructores::correo = correo;
+}
+
+int Instructores::getTelefono() {
+    return telefono;
+}
+
+int Instructores::setTelefono(int telefono) {
+    Instructores::telefono = telefono;
+}
+
 void Instructores::asignarSocio(Personas socio) {
     vectorSocios[cantidadSocios] = socio;
     cantidadSocios++;
