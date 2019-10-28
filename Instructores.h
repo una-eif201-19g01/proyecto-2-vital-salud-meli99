@@ -13,6 +13,7 @@ class Instructores{
         string vectorSocios;
         string nombre;
         string cedula;
+        int id;
         Personas *vectorInstructores;
 
     public:
@@ -21,6 +22,7 @@ class Instructores{
         Instructores(int cantidad, int tamano, string vector);
         string toString();
         string getInstructor();
+        int getId();
 
        
 
@@ -28,7 +30,7 @@ class Instructores{
         void setTamano(int tamano);
         int getCantidad();
         void setCantidad(int cantidad);
-        void asignarSocio(string idSocio);
+        void asignarSocio(Personas socio);
         // void addSocio(Personas socio);
 
         string buscaSocio(int cedulaSocio);

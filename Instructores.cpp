@@ -4,6 +4,7 @@
 Instructores::Instructores() {
     cantidadSocios = 0;
     tamano = 99;
+    id = 0;
 
     for (int i = 0; i<tamano; i++) {
         vectorInstructores[i] = nullptr;
@@ -41,16 +42,20 @@ void Instructores::setCantidad(int cantidad) {
     Instructores::cantidadSocios = cantidad;
 }
 
-void Instructores::asignarSocio(string idSocio) {
-    vectorSocios[cantidadSocios] = idSocio;
+int Instructores::getId() {
+    return id;
+}
+
+void Instructores::asignarSocio(Personas socio) {
+    vectorSocios[cantidadSocios] = socio;
     cantidadSocios++;
 }
 
-void Instructores::addSocio(Personas socio) {
-    cantidadSocios++;
+// void Instructores::addSocio(Personas socio) {
+//     cantidadSocios++;
 
-    vectorInstructores[cantidadSocios] = socio;
-}
+//     vectorInstructores[cantidadSocios] = socio;
+// }
 
 // string Instructores::getInstructor() {
 //     for (int i = 0; i < tamano; i++) {

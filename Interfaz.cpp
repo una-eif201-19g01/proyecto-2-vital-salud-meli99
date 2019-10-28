@@ -3,6 +3,8 @@
 using namespace std;
 
 Interfaz::Interfaz() {
+    inst = new Instructores();
+    listaInstructores = new ListaInstructores();
 }
 
 Interfaz menu1;
@@ -10,7 +12,7 @@ Interfaz menu1;
 void Interfaz::correrInterfaz() {
 int opc;
  string nombreSocio; int cedulaSocio; string correoSocio; int telefonoSocio; float fechainscripcionSocio;
- int pesoActual;
+ int pesoActual; int idInstructor;
  string nombreInstuct; int cedulaInstruct; string correoInstruct; int telefonoInstruct; 
  float fechaInicio; float fechaVencimiento; string objetivo; int partedelCuerpo; string nombreEjercicio; int series; int repeticiones;
     do{
@@ -46,7 +48,17 @@ int opc;
         cin>>telefonoSocio;
         cout<<"Digita la fecha de inscripcion\n";
         cin>>fechainscripcionSocio;
-        cout<<"Ingrese una tecla y enter para continuar..."\n;
+        cout<<"Digita la id del instructor a cargo\n";
+        cin>>idInstructor;
+        cout<<"Ingrese una tecla y enter para continuar...\n";
+
+        socio->setnombreSocio(nombreSocio);
+        socio->setcedulaSocio(cedulaSocio);
+        socio->setcorreoSocio(correoSocio);
+        socio->settelefonoSocio(telefonoSocio);
+        socio->setfechaInscripcionSocio(fechainscripcionSocio);
+
+        listaInstructores->insertarSocioPorId(idInstructor, socio);
 		cin>>x;
      }break;
      case 2:{

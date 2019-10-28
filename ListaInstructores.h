@@ -2,6 +2,7 @@
 #define LISTAINSTRUCORES_H
 
 #include "Nodo.h"
+#include "Personas.h"
 
 using namespace std;
 
@@ -20,6 +21,7 @@ public:
 	bool eliminarFinal();
 	string obtenerDatosVehiculo(int);
     bool eliminarPorId(int n);
+	bool insertarSocioPorId(int n, Personas *socio);
 	int totalNodos();
 };
 
