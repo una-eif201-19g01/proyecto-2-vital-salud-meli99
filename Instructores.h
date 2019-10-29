@@ -10,14 +10,14 @@ class Instructores{
         int tamano;
         int cantidadSocios;
         // Personas *vectorInstructores; 
-        string vectorSocios;
+        Personas *vectorSocios;
         string nombre;
         int id;
         int cedula;
         string correo;
         int telefono;
 
-        Personas *vectorInstructores;
+        // Personas *vectorInstructores;
 
     public:
         Instructores();
@@ -25,6 +25,7 @@ class Instructores{
         Instructores(int cantidad, int tamano, string vector);
         string toString();
         string getInstructor();
+        string getSocios(string nombreInstructor);
 
 
        
@@ -52,6 +53,7 @@ class Instructores{
         //si por ejemplo hay dos arreglos, busca en los dos las mejores perdidas de peso, y 
         //muestra el que tenga resultados mas bajos :)
         //hay un metodo en Personas que muestra la perdida de peso 
+
 
 };
 

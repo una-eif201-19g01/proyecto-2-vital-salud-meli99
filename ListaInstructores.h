@@ -23,6 +23,9 @@ public:
     bool eliminarPorId(int n);
 	bool insertarSocioPorId(int n, Personas *socio);
 	int totalNodos();
+
+	string getListaSocios();
+	string getListaInstructores();
 };
 
 #endif

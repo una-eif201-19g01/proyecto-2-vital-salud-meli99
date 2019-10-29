@@ -125,3 +125,17 @@ void Instructores::asignarSocio(Personas socio) {
      }
      return mayorPerdida;
  }
+
+string Instructores::toString() {
+    string str;
+
+    return (to_string(id) + "\t" + nombre);
+}
+
+string Instructores::getSocios(string nombreInstructor) {
+    for (int i = 0; i < cantidadSocios; i++) {
+        if (vectorSocios[i] != nullptr) {
+            vectorSocios[i].getSociosPorInstructor(nombreInstructor);
+        }
+    }
+}

@@ -145,3 +145,25 @@ bool ListaInstructores::insertarSocioPorId(int n, Personas *socio){
     }
     return false;
 }
+
+string ListaInstructores::getListaInstructores() {
+	string str;
+	actual=primero;
+
+	while (actual!=nullptr){
+		str+=actual->getInstructor().toString();
+		str+="\n";
+		actual=actual->getNext();
+	}
+	return str;
+}
+
+string ListaInstructores::getListaSocios() {
+	string str;
+	actual = primero;
+
+	while (actual!=nullptr){
+		str+=actual->getInstructor().getSocios(actual->getInstructor().getNombre() + "\n");
+	}
+	return str;
+}

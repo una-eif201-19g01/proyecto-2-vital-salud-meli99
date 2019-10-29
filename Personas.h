@@ -48,5 +48,6 @@ class Personas{
     //metodos
         string toString();
         float perdidaGrasa(int pesoActual);
+        string getSociosPorInstructor(string nombreInstructor);
 };
 #endif
