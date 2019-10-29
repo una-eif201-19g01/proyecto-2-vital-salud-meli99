@@ -15,6 +15,7 @@ int opc;
  int pesoActual; int idInstructor;
  string nombreInstuct; int cedulaInstruct; string correoInstruct; int telefonoInstruct; 
  float fechaInicio; float fechaVencimiento; string objetivo; int partedelCuerpo; string nombreEjercicio; int series; int repeticiones;
+ char Dia; int hora;
     do{
     cout<<"++++++++++++++++++++++++++++++++++++++\n";
 	cout<<"+            MENU PRINCIPAL          +\n";
@@ -287,6 +288,16 @@ int opc;
  switch(opc){
      case 1:{
         char x;
+        cout<<"Digite el Dia que desea crear la clase(L,M,K,J,V,S,D):\n";
+        cout<<"|Lunes=L|Martes=M|Miercoles=K|Jueves=J|Viernes=V|Sabado=V|Domingo=D|\n";
+        cin>>Dia;
+        cout<<"Digite la Hora que desea para la clase, en base al horario de 24 horas\n";
+        cin>>hora;
+        menu1.crearGrupal(Dia,hora);
+
+
+
+        
         cout<<"Digite el salón deseado(A,B,C):\n";
         cin>>salon;
         cout<<menu1.
