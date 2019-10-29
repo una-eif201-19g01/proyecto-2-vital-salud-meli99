@@ -170,14 +170,14 @@ string ListaInstructores::getListaSocios() {
 	return str;
 }
 
-Personas ListaInstructores::getSocioPorId(int cedula) {
+Personas* ListaInstructores::getSocioPorId(int cedula) {
 	actual = primero;
 	while (actual!=nullptr){
 		if (actual->getInstructor().getSocioPorId(cedula) != NULL) {
 			return actual->getInstructor().getSocioPorId(cedula);
 		}
 	}
-	return NULL;
+	return nullptr;
 }
 
 string ListaInstructores::mejoresResultadosPerdidaGrasa() {

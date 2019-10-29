@@ -120,11 +120,11 @@ int opc;
         cin>>pesoActual;
         cout<<"La perdida de peso es de:\n";
 
-        if (listaInstructores->getSocioPorId(cedulaSocio) != NULL) {
-            Personas tempPer = listaInstructores->getSocioPorId(cedulaSocio);
-            cout<<tempPer.perdidaGrasa(pesoActual);
+        if (listaInstructores->getSocioPorId(cedulaSocio) != nullptr) {
+            Personas* tempPer = listaInstructores->getSocioPorId(cedulaSocio);
+            cout<<tempPer->perdidaGrasa(pesoActual);
         }
-        
+
         cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
      }break;
@@ -136,7 +136,7 @@ int opc;
         cout<<"Instructor con mejores resultados en pérdida de grasa\n";
         cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
         cout<<"El instructor con mejores resultados es: \n";
-        cout<<menu1.mejoresPesos();
+        cout<<listaInstructores->mejoresResultadosPerdidaGrasa();
         cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
      }break;

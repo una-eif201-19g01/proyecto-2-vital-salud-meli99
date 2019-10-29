@@ -6,24 +6,18 @@ Instructores::Instructores() {
     tamano = 99;
     id = 0;
 
-    for (int i = 0; i<tamano; i++) {
-        vectorInstructores[i] = nullptr;
-    }
+    // for (int i = 0; i<tamano; i++) {
+    //     vectorSocios[i] = Personas per();
+    // }
 }
 
 Instructores::Instructores(int cantidad, int tamano) {
-    cantidadSocios = Instructores::cantidadSocios;
-    tamano = Instructores::tamano;
-
-    for (int i = 0; i<tamano; i++) {
-        vectorInstructores[i] = nullptr;
-    }
-}
-
-Instructores::Instructores(int cantidad, int tamano, string vector) {
-    Instructores::cantidad = cantidad;
+    cantidadSocios = cantidad;
     Instructores::tamano = tamano;
-    Instructores::vectorInstructores = vector;
+
+    // for (int i = 0; i<tamano; i++) {
+    //     vectorInstructores[i];
+    // }
 }
 
 int Instructores::getTamano() {
@@ -78,12 +72,12 @@ int Instructores::getTelefono() {
     return telefono;
 }
 
-int Instructores::setTelefono(int telefono) {
+void Instructores::setTelefono(int telefono) {
     Instructores::telefono = telefono;
 }
 
 void Instructores::asignarSocio(Personas socio) {
-    vectorSocios[cantidadSocios] = socio;
+    vectorSocios[cantidadSocios] = &socio;
     cantidadSocios++;
 }
 
@@ -105,8 +99,8 @@ void Instructores::asignarSocio(Personas socio) {
 
  string Instructores::buscaSocio(int cedulaSocio) {
      for (int i = 0; i < cantidadSocios; i++) {
-         if (vectorInstructores[i].getcedulaSocio() == cedulaSocio) {
-             return vectorInstructores[i].getnombreSocio();
+         if (vectorSocios[i]->getcedulaSocio() == cedulaSocio) {
+             return vectorSocios[i]->getnombreSocio();
          }
      }
      return "Socio con esa cedula no existe";
@@ -116,13 +110,13 @@ void Instructores::asignarSocio(Personas socio) {
      float mayorPerdida = 0;
 
     for (int i = 0; i < cantidadSocios; i++) {
-            int perdidaActual = vectorInstructores[i].getPerdidaGrasa();
-            
-            if (perdidaActual > mayorPerdida) {
-                mayorPerdida = perdidaActual;
-            }
-         }
-     }
+        int perdidaActual = vectorSocios[i]->getPerdidaGrasa();
+        
+        if (perdidaActual > mayorPerdida) {
+            mayorPerdida = perdidaActual;
+        }
+    }
+
      return mayorPerdida;
  }
 
@@ -135,16 +129,17 @@ string Instructores::toString() {
 string Instructores::getSocios(string nombreInstructor) {
     for (int i = 0; i < cantidadSocios; i++) {
         if (vectorSocios[i] != nullptr) {
-            vectorSocios[i].getSociosPorInstructor(nombreInstructor);
+            return vectorSocios[i]->getSociosPorInstructor(nombreInstructor);
         }
     }
+    return NULL;
 }
 
-Personas Instructores::getSocioPorId(int cedula) {
+Personas** Instructores::getSocioPorId(int cedula) {
     for (int i = 0; i < cantidadSocios; i++) {
         if (vectorSocios[i] != nullptr) {
-            if (vectorSocios[i].getcedulaSocio() == cedula) {
-                return vectorSocios[i];
+            if (vectorSocios[i]->getcedulaSocio() == cedula) {
+                return &vectorSocios[i];
             }
         }
     }
