@@ -179,3 +179,19 @@ Personas ListaInstructores::getSocioPorId(int cedula) {
 	}
 	return NULL;
 }
+
+string ListaInstructores::mejoresResultadosPerdidaGrasa() {
+	string str = "";
+	string mejorInstructor = "";
+	int mejorPerdida = 0;
+
+	actual = primero;
+	while (actual!=nullptr){
+		if (actual->getInstructor().mejoresPesos() > mejorPerdida) {
+			mejorInstructor = actual->getInstructor().getNombre();
+			mejorPerdida = actual->getInstructor().mejoresPesos();
+		}
+	}
+
+	return mejorInstructor + ": " + to_string(mejorPerdida) + "\n";
+}
