@@ -139,3 +139,14 @@ string Instructores::getSocios(string nombreInstructor) {
         }
     }
 }
+
+Personas Instructores::getSocioPorId(int cedula) {
+    for (int i = 0; i < cantidadSocios; i++) {
+        if (vectorSocios[i] != nullptr) {
+            if (vectorSocios[i].getcedulaSocio() == cedula) {
+                return vectorSocios[i];
+            }
+        }
+    }
+    return NULL;
+}

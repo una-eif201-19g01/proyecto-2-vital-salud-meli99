@@ -26,6 +26,7 @@ public:
 
 	string getListaSocios();
 	string getListaInstructores();
+	Personas getSocioPorId(int cedula);
 };
 
 #endif

@@ -116,11 +116,15 @@ int opc;
         cout<<"++++++++++++++++++++++++++++++++++++++\n";
         cout<<"Digite el ID del socio:\n";
         cin>>cedulaSocio;
-        cout<<menu1.buscarSocio(cedulaSocio);
         cout<<"Digite el peso actual:\n";
         cin>>pesoActual;
         cout<<"La perdida de peso es de:\n";
-        cout<<menu1.perdidaGrada(pesoActual)
+
+        if (listaInstructores->getSocioPorId(cedulaSocio) != NULL) {
+            Personas tempPer = listaInstructores->getSocioPorId(cedulaSocio);
+            cout<<tempPer.perdidaGrasa(pesoActual);
+        }
+        
         cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
      }break;

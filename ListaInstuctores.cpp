@@ -163,7 +163,19 @@ string ListaInstructores::getListaSocios() {
 	actual = primero;
 
 	while (actual!=nullptr){
-		str+=actual->getInstructor().getSocios(actual->getInstructor().getNombre() + "\n");
+		str+=actual->getInstructor().getSocios(actual->getInstructor().getNombre());
+		str+="\n";
+		actual=actual->getNext();
 	}
 	return str;
+}
+
+Personas ListaInstructores::getSocioPorId(int cedula) {
+	actual = primero;
+	while (actual!=nullptr){
+		if (actual->getInstructor().getSocioPorId(cedula) != NULL) {
+			return actual->getInstructor().getSocioPorId(cedula);
+		}
+	}
+	return NULL;
 }

@@ -44,6 +44,7 @@ class Instructores{
         int getCantidad();
         void setCantidad(int cantidad);
         void asignarSocio(Personas socio);
+        Personas getSocioPorId(int cedula);
         // void addSocio(Personas socio);
 
         string buscaSocio(int cedulaSocio);
