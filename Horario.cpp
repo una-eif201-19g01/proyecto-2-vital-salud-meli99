@@ -10,7 +10,7 @@ const int horas=12;
 class Coleccion{
 	
 private:
-	int matriz[tam][horas];
+	string matriz[tam][horas];
 public:
 	
 	Coleccion(){
