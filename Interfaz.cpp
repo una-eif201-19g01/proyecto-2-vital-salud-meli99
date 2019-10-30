@@ -15,7 +15,7 @@ int opc;
  int pesoActual; int idInstructor;
  string nombreInstuct; int cedulaInstruct; string correoInstruct; int telefonoInstruct; 
  float fechaInicio; float fechaVencimiento; string objetivo; int partedelCuerpo; string nombreEjercicio; int series; int repeticiones;
- char Dia; int hora;
+ char Dia; int hora; string nombreGrupal; string nombreInstructorGrupal; char Salon; string horario;
 // do{
     while (true) {
     cout<<"++++++++++++++++++++++++++++++++++++++\n";
@@ -152,6 +152,9 @@ int opc;
 
      case 7:{
         //  do{
+        // cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+        // cout<<"Menu Instructores\n";
+        // cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
         cout<<"1 - Socios por instructor\n";
         cout<<"2 - Asignar rutina a socio\n";
         cout<<"3 - Detalle Socio\n";
@@ -297,19 +300,26 @@ int opc;
         switch(opc){
             case 1:{
                 // char x;
+                //cout<<"Digite el nombre de la clase grupal: \n";
+                //cin>>nombreGrupal;
+                //grupo.setNombre(nombreGrupal);
+                 //cout<<"Digite el nombre del instructor para la clase grupal: \n";
+                //cin>>nombreInstructorGrupal;
+                //grupo.setInstructor(nombreInstructorGrupal);
+                 //cout<<"Digite el salón deseado(A,B,C):\n";
+                 //cin>>Salon;
+                 //grupo.setSalon(Salon);
+                 //cout<<"Digite el dia y la hora: \n";
+                 //cin>>horario;
+                // grupo.setHorario(horario)  
+                //cout<<menu1.toStringGrupal();             
                 // cout<<"Digite el Dia que desea crear la clase(L,M,K,J,V,S,D):\n";
                 // cout<<"|Lunes=L|Martes=M|Miercoles=K|Jueves=J|Viernes=V|Sabado=V|Domingo=D|\n";
                 // cin>>Dia;
                 // cout<<"Digite la Hora que desea para la clase, en base al horario de 24 horas\n";
                 // cin>>hora;
-                // menu1.crearGrupal(Dia,hora);
-
-
-
-                
-                // cout<<"Digite el salón deseado(A,B,C):\n";
-                // cin>>salon;
-                // cout<<menu1.
+                // grupo.crearGrupal(Dia,hora);
+                //cout<<menu1.toStringHorario();
                 // cout<<"Ingrese una tecla y enter para continuar...\n";
                 // cin>>x;
             }break;

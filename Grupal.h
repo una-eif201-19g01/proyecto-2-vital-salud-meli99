@@ -25,7 +25,7 @@ class Grupal{
         string getHorario();
         void setHorario(string Horario);
     
-         string toString();
+         string toStringGrupal();
          string crearGrupal(char Dia, int hora);
 
 };

@@ -32,7 +32,7 @@
             Grupal::Horario=Horario;
         }
     
-         string Grupal::toString(){
+         string Grupal::toStringGrupal(){
              stringstream grupo;
              grupo<<"El nombre del Grupo es: "<<get.Nombre<<endl;
              grupo<<"El nombre del Instructor es: "<<get.Instructor<<endl;

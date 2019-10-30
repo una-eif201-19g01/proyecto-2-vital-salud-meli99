@@ -43,7 +43,7 @@ public:
 		
 		~ Coleccion() {}
 		
-		string toString(){
+		string toStringHorario(){
 			stringstream s;
 			for (int i = 0; i< tam;i++){
 			for (int j = 0; j< horas;j++){

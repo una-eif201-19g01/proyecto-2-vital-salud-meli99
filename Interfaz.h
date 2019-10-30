@@ -4,11 +4,14 @@
 #include "Personas.h"
 #include "Instructores.h"
 #include "ListaInstructores.h"
+#include "Grupal.h"
+#include "Horario.cpp"
 
 class Interfaz {
     private:
         Instructores *inst;
         ListaInstructores *listaInstructores;
+        Grupal grupo;
 
     public:
         Interfaz();
