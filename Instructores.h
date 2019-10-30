@@ -3,6 +3,7 @@
 
 #include<string>
 #include "Personas.h"
+#include "ListaSocios.h"
 // using namespace std;
 
 class Instructores{
@@ -10,7 +11,7 @@ class Instructores{
         int tamano;
         int cantidadSocios;
         // Personas *vectorInstructores; 
-        Personas *vectorSocios[10];
+        ListaSocios *listaSocios;
         string nombre;
         int id;
         int cedula;

@@ -1,5 +1,5 @@
-Gimnasio: main.o Instructores.o Interfaz.o Personas.o Nodo.o ListaInstructores.o
-	g++ -g -std=c++11 -Wall main.o Instructores.o Interfaz.o Personas.o Nodo.o ListaInstructores.o -o Gimnasio
+Gimnasio: main.o Instructores.o Interfaz.o Personas.o Nodo.o ListaInstructores.o ListaSocios.o
+	g++ -g -std=c++11 -Wall main.o Instructores.o Interfaz.o Personas.o Nodo.o ListaInstructores.o ListaSocios.o -o Gimnasio
 
 main.o: Interfaz.h main.cpp
 	g++ -g -std=c++11 -Wall -c main.cpp
@@ -18,6 +18,9 @@ Nodo.o: Nodo.cpp
 
 ListaInstructores.o: ListaInstructores.cpp
 	g++ -g -std=c++11 -Wall -c ListaInstructores.cpp
+
+ListaSocios.o : ListaSocios.cpp
+	g++ -g -std=c++11 -Wall -c ListaSocios.cpp
 
 clean:
 	rm *.o Gimnasio
