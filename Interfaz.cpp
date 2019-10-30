@@ -322,6 +322,7 @@ int opc;
                 //cout<<menu1.toStringHorario();
                 // cout<<"Ingrese una tecla y enter para continuar...\n";
                 // cin>>x;
+            
             }break;
 
 
