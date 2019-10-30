@@ -6,12 +6,15 @@
 #include "ListaInstructores.h"
 #include "Grupal.h"
 #include "Horario.cpp"
+#include "Rutinas.h"
 
 class Interfaz {
     private:
         Instructores *inst;
         ListaInstructores *listaInstructores;
         Grupal grupo;
+        Rutina rutinario;
+         Personas socio;
 
     public:
         Interfaz();

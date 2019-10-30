@@ -6,6 +6,8 @@ using namespace std;
 
 class Personas{
    private:
+        float altura;
+        float porcentajeGrasa;
         string nombreSocio;
         int cedulaSocio;
         string correoSocio;
@@ -16,7 +18,13 @@ class Personas{
         int masaMuscularSocio;
         float perdidaDeGrasa;
  public:
-       Personas();      
+       Personas();  
+
+       void setporcentajeGrasa(float porcentajeGrasa);
+       float getporcentajeGrasa();
+
+       void setaltura(float altura);
+       float getaltura();
 
         void setnombreSocio(string nombreSocio);
         string getnombreSocio();

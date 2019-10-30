@@ -1,6 +1,8 @@
 #include "Personas.h"
 
     Personas::Personas(){
+    altura=0;
+    porcentajeGrasa=0;
     nombreSocio="_";
     cedulaSocio=0;
     correoSocio="_";
@@ -10,6 +12,20 @@
     masaCorporalSocio=0;
     masaMuscularSocio=0;   
     }     
+
+    void Personas::setporcentajeGrasa(float porcentajeGrasa){
+        Personas::porcentajeGrasa=porcentajeGrasa;
+    }
+    float Personas::getporcentajeGrasa(){
+        return porcentajeGrasa;
+    }
+
+    void Personas::setaltura(float altura){
+        Personas::altura=altura;
+     }
+    float Personas::getaltura(){
+        return altura;
+     }
 
     void Personas::setnombreSocio(string nombreSocio){
         Personas::nombreSocio=nombreSocio;

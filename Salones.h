@@ -12,6 +12,7 @@ class Salones{
         int capacidad;
         
  public:
+ //hacer una lista de salones.
        Personas();      
 
         void setnombreSalon(string nnombreSalon);
