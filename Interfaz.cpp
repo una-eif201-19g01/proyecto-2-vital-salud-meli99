@@ -15,7 +15,7 @@ int opc;
  int pesoActual; int idInstructor;
  string nombreInstuct; int cedulaInstruct; string correoInstruct; int telefonoInstruct; 
  float fechaInicio; float fechaVencimiento; string objetivo; int partedelCuerpo; string nombreEjercicio; int series; int repeticiones;
- char Dia; int hora; string nombreGrupal; string nombreInstructorGrupal; char Salon; string horario;
+ char Dia; int hora; string nombreGrupal; string nombreInstructorGrupal; char Salon; string horario; int tam; int cont=0; int cantidad;
 // do{
     while (true) {
     cout<<"++++++++++++++++++++++++++++++++++++++\n";
@@ -309,8 +309,12 @@ int opc;
                  //cout<<"Digite el salón deseado(A,B,C):\n";
                  //cin>>Salon;
                  //grupo.setSalon(Salon);
-                 //cout<<"Digite el dia y la hora: \n";
-                 //cin>>horario;
+                 //cout<<"Digita el tamaño que deseas para el grupo: ";
+	            //cin>>tam;
+	            // Grupal grupo(tam);
+	            //cout<<"\n";
+                //cout<<"Digite el dia y la hora: \n";
+                //cin>>horario;
                 // grupo.setHorario(horario)  
                 //cout<<menu1.toStringGrupal();             
                 // cout<<"Digite el Dia que desea crear la clase(L,M,K,J,V,S,D):\n";
@@ -319,7 +323,6 @@ int opc;
                 // cout<<"Digite la Hora que desea para la clase, en base al horario de 24 horas\n";
                 // cin>>hora;
                 // grupo.crearGrupal(Dia,hora);
-                //cout<<menu1.toStringHorario();
                 // cout<<"Ingrese una tecla y enter para continuar...\n";
                 // cin>>x;
             
@@ -328,11 +331,12 @@ int opc;
 
             case 2:{
                 // char x;
-                // cout<<"Digite el ID de la clase:\n";
-                // cin>>leccion;
-                // cout<<menu1.
+                // cout<<"Digite el nombre de la clase:\n";
+                // cin>>nombreGrupal;
+                //cout<<menu1.toStringHorario();
+                //cout<<menu1.toStringGrupal(); 
                 // cout>>"Socios Matriculados:\n";
-                // cout<<menu1.
+                // cout<<menu1.toStringVectorGrupal();
                 // cout<<"Ingrese una tecla y enter para continuar...\n";
                 // cin>>x;
             }break;
@@ -340,14 +344,17 @@ int opc;
 
             case 3:{
                 // char x;
-                // cout<<"Digite el ID de la clase:\n";
-                // cin>>leccion;
-                // cout<<menu1.
-                // cout<<"Digita el ID del socio:\n";
-                // cin>>cedulaSocio;
-                // cout<<"Nombre dek socio:\n";
-                // cout<<menu1.BuscarSocio();
-
+                // cout<<"Digite el nombre de la clase:\n";
+                // cin>>nombreGrupal;
+	            //cout<<"Digita la cantidad de socios que deseas matricular: ";
+	            //cin>>cantidad;
+	            //cont=0;
+	            //while(cont<cantidad){
+		        //cout<<"Digita el socio "<<cont+1<<": ";
+		        //cin>>nombreSocio;
+		        //grupo.insertarSocio(nombreSocio);
+		        //cont++;
+	            //}
                 // cout<<"Ingrese una tecla y enter para continuar...\n";
                 // cin>>x;
             }break;}

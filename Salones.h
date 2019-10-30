@@ -1,0 +1,29 @@
+#ifndef SALONES_H
+#define SALONES_H
+
+#include<iostream>
+#include "Horario.cpp"
+using namespace std;
+
+class Salones{
+   private:
+        string nombreSalon;
+        int codigo;
+        int capacidad;
+        
+ public:
+       Personas();      
+
+        void setnombreSalon(string nnombreSalon);
+        string getnombreSalon();
+
+        void setcodigo(int codigo);
+        int getcodigo();
+
+        void setcapacidad(int capacidad);
+        int getcapacidad();
+
+    //metodos
+        string toStringSalones();
+};
+#endif

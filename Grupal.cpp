@@ -420,3 +420,41 @@
                 return "NO es una hora valida";
             }
 }
+	Grupal::Grupal(){
+        cantidad=0;
+        tamano=50;
+        for(int i=0;i<tamano;i++)
+            grupo[i]=' ';
+    }
+    Grupal::Grupal(int n){
+        cantidad=0;
+        tamano=n;
+        for(int i=0;i<tamano;i++)
+            frase[i]=' ';
+    }
+    ~Grupal::Grupal(){}
+    void setCantidad(int can){
+        if((can<tamano)&&(can>0))
+            cantidad=can;
+    }
+    int Gruapl::getCantidad(){
+        return cantidad;
+    }
+    int Grupal::getTamano(){
+        return tamano;
+    }
+	void Grupal::insertarSocio(string nombreSocio){
+		if (cantidad < tamano);
+			frase[cantidad]=elem; 
+		setCantidad(cantidad+1); 
+	}
+	string toStringVectorGrupal(){
+		stringstream x;
+		x<<"Grupo: \n";
+		x<<getNombre();
+		for(int i=0;i<cantidad;i++){
+		x<<"["<<frase[i]<<"]";}
+		return x.str();
+	}
+
+
