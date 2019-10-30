@@ -127,20 +127,26 @@ int ListaInstructores::totalNodos(){
 //     return false;
 // }
 
-bool ListaInstructores::insertarSocioPorId(int n, Personas *socio){
+bool ListaInstructores::insertarSocioPorId(int n, Personas socio){
     actual = primero;
-    Nodo* temp = primero;
-
+	//lista vacia
+	if (actual == nullptr) {
+		return false;
+	}
     if(actual->getInstructor().getId() == n) {
-            actual->getInstructor().asignarSocio(socio);
-	} else if (actual->getNext() == nullptr) {
+		actual->getInstructor().asignarSocio(socio);
+		return true;
+	} 
+	else if (actual->getNext() == nullptr) {
         return false;
     } else {
         while (actual->getNext() != nullptr) {
-            if (actual->getNext()->getInstructor().getId() == n) {
-                actual->getNext()->getInstructor().asignarSocio(socio);
+			actual = actual->getNext();
+            if (actual->getInstructor().getId() == n) {
+                actual->getInstructor().asignarSocio(socio);
+				return true;
             }
-            actual = actual->getNext();
+            
         }
     }
     return false;

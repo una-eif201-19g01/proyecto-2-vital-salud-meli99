@@ -16,7 +16,8 @@ int opc;
  string nombreInstuct; int cedulaInstruct; string correoInstruct; int telefonoInstruct; 
  float fechaInicio; float fechaVencimiento; string objetivo; int partedelCuerpo; string nombreEjercicio; int series; int repeticiones;
  char Dia; int hora;
-    do{
+// do{
+    while (true) {
     cout<<"++++++++++++++++++++++++++++++++++++++\n";
 	cout<<"+            MENU PRINCIPAL          +\n";
 	cout<<"++++++++++++++++++++++++++++++++++++++\n";
@@ -31,9 +32,9 @@ int opc;
     cout << "9-  Salir del sistema\n";
     cin>>opc;
     system("cls");
- switch(opc){
+    switch(opc){
      case 1:{
-         Personas *socio;
+         Personas socio;
 
         char x;
         cout<<"++++++++++++++++++++++++++++++++++++++\n";
@@ -43,7 +44,7 @@ int opc;
         cin>>nombreSocio;
         cout<<"Digita el numero de cedula\n";
         cin>>cedulaSocio;
-        cout<<"Digita elo correo electronico del socio\n";
+        cout<<"Digita el correo electronico del socio\n";
         cin>>correoSocio;
         cout<<"Digita el numero telefonico del socio\n";
         cin>>telefonoSocio;
@@ -51,15 +52,20 @@ int opc;
         cin>>fechainscripcionSocio;
         cout<<"Digita la id del instructor a cargo\n";
         cin>>idInstructor;
+
+        socio.setnombreSocio(nombreSocio);
+        socio.setcedulaSocio(cedulaSocio);
+        socio.setcorreoSocio(correoSocio);
+        socio.settelefonoSocio(telefonoSocio);
+        socio.setfechaInscripcionSocio(fechainscripcionSocio);
+
+        if (listaInstructores->insertarSocioPorId(idInstructor, socio)) {
+            cout<<"Socio Agregado\n";
+        } else {
+            cout<<"No se pudo agregar socio. Verifique que existan instructores y que el id del instructor sea correcto\n";
+        }
+
         cout<<"Ingrese una tecla y enter para continuar...\n";
-
-        socio->setnombreSocio(nombreSocio);
-        socio->setcedulaSocio(cedulaSocio);
-        socio->setcorreoSocio(correoSocio);
-        socio->settelefonoSocio(telefonoSocio);
-        socio->setfechaInscripcionSocio(fechainscripcionSocio);
-
-        listaInstructores->insertarSocioPorId(idInstructor, socio);
 		cin>>x;
      }break;
      case 2:{
@@ -79,7 +85,6 @@ int opc;
         cin>>telefonoInstruct;
         cout<<"Digita el id del instructor\n";
         cin>>idInstructor;
-        cout<<"Ingrese una tecla y enter para continuar...\n";
 
         instructor.setNombre(nombreInstuct);
         instructor.setCedula(cedulaInstruct);
@@ -88,6 +93,8 @@ int opc;
         instructor.setId(idInstructor);
 
         listaInstructores->insertarFinal(instructor);
+
+        cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
      }break;
      case 3:{
@@ -123,7 +130,7 @@ int opc;
 
         if (listaInstructores->getSocioPorId(cedulaSocio) != nullptr) {
             Personas* tempPer = listaInstructores->getSocioPorId(cedulaSocio);
-            cout<<tempPer->perdidaGrasa(pesoActual);
+            // cout<<tempPer->perdidaGrasa(pesoActual);
         }
 
         cout<<"Ingrese una tecla y enter para continuar...\n";
@@ -144,7 +151,7 @@ int opc;
 
 
      case 7:{
-         do{
+        //  do{
         cout<<"1 - Socios por instructor\n";
         cout<<"2 - Asignar rutina a socio\n";
         cout<<"3 - Detalle Socio\n";
@@ -158,186 +165,189 @@ int opc;
 
         switch (opc){
         case 1:{
-        char x;
-        cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
-        cout<<"Socios por instructor\n";
-        cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
-        cout<<"ID instructor:\n";
-        cout<<get.nombreInstruct;
-        cout<<"Nombre:\n";
-        cout<<get.nombreInstruct;
-        cout<<"Lista de socios:\n";
-        cout<<menu1.instructor[];
-         cout<<"Ingrese una tecla y enter para continuar...\n";
-		cin>>x;
+        // char x;
+        // cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+        // cout<<"Socios por instructor\n";
+        // cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+        // cout<<"ID instructor:\n";
+        // cout<<get.nombreInstruct;
+        // cout<<"Nombre:\n";
+        // cout<<get.nombreInstruct;
+        // cout<<"Lista de socios:\n";
+        // cout<<menu1.instructor[];
+        //  cout<<"Ingrese una tecla y enter para continuar...\n";
+		// cin>>x;
         }break;
 
 
          case 2:{
-        char x;
-        cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
-        cout<<"Asignación de rutina\n";
-        cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
-        cout<<"ID Socio:\n";
-        cin>>cedulaSocio;
-        cout<<"Nombre del socio:\n";
-        cout<<menu1.Buscarsocio;
-        cout<<"Rutina numero:\n";
-        cout<<menu1.asignaRutina;
-        cout<<"Fecha de Inicio:\n";
-        cin>>fechaInicio;
-        cout<<"Fecha de Vencimiento:\n";
-        cin>>fechaVencimiento;
-        cout<<"Objetivo:\n";
-        cin>>objetivo;
-        cout<<"Parte del cuerpo:(1-Pierna, 2-Pecho, 3-espalda, 4-hombro ,5-tríceps, 6-biceps, 7-trapecio, 8-antebrazo)\n";
-        cin>>partedelCuerpo;
-        cout<<"Nombre del Ejercicio:\n";
-        cin>>nombreEjercicio;
-        cout<<"Series:\n";
-        cin>>series;
-        cout<<"Repeticiones:\n";
-        cin>>repeticiones;
-        cout<<menu1.stringtoString();
-        cout<<"Ingrese una tecla y enter para continuar...\n";
-		cin>>x;
+        // char x;
+        // cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+        // cout<<"Asignación de rutina\n";
+        // cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+        // cout<<"ID Socio:\n";
+        // cin>>cedulaSocio;
+        // cout<<"Nombre del socio:\n";
+        // cout<<menu1.Buscarsocio;
+        // cout<<"Rutina numero:\n";
+        // cout<<menu1.asignaRutina;
+        // cout<<"Fecha de Inicio:\n";
+        // cin>>fechaInicio;
+        // cout<<"Fecha de Vencimiento:\n";
+        // cin>>fechaVencimiento;
+        // cout<<"Objetivo:\n";
+        // cin>>objetivo;
+        // cout<<"Parte del cuerpo:(1-Pierna, 2-Pecho, 3-espalda, 4-hombro ,5-tríceps, 6-biceps, 7-trapecio, 8-antebrazo)\n";
+        // cin>>partedelCuerpo;
+        // cout<<"Nombre del Ejercicio:\n";
+        // cin>>nombreEjercicio;
+        // cout<<"Series:\n";
+        // cin>>series;
+        // cout<<"Repeticiones:\n";
+        // cin>>repeticiones;
+        // cout<<menu1.stringtoString();
+        // cout<<"Ingrese una tecla y enter para continuar...\n";
+		// cin>>x;
         }break;
 
 
         case 3:{
-        char x;
-        cout<<"Digita el ID del Socio\n";
-        cin>>cedulaSocio;
-        cout<<"Nombre del socio:\n";
-        cout<<menu1.BuscarSocio();
-        cout<<"Nombre del instructor:\n";
-        cout<<menu1.BuscarInstructor();
-        cout<<"Clases Grupales:\n";
-        cout<<menu1.
-        cout<<"Historial de rutinas:\n";
-        cout<<menu1.
-        cout<<"Ingrese una tecla y enter para continuar...\n";
-		cin>>x;
+        // char x;
+        // cout<<"Digita el ID del Socio\n";
+        // cin>>cedulaSocio;
+        // cout<<"Nombre del socio:\n";
+        // cout<<menu1.BuscarSocio();
+        // cout<<"Nombre del instructor:\n";
+        // cout<<menu1.BuscarInstructor();
+        // cout<<"Clases Grupales:\n";
+        // cout<<menu1.
+        // cout<<"Historial de rutinas:\n";
+        // cout<<menu1.
+        // cout<<"Ingrese una tecla y enter para continuar...\n";
+		// cin>>x;
         }break;
 
 
         case 4:{
-        char x;
-        cout<<"Digita el ID del Instructor\n";
-        cin>>cedulaInstruct;
-        cout<<"Nombre del socio:\n";
-        cout<<menu1.BuscarInstructor();
-        cout<<"Rutinas vencidas:\n";
-        cout<<menu1.
-        cout<<"Ingrese una tecla y enter para continuar...\n";
-		cin>>x;
+        // char x;
+        // cout<<"Digita el ID del Instructor\n";
+        // cin>>cedulaInstruct;
+        // cout<<"Nombre del socio:\n";
+        // cout<<menu1.BuscarInstructor();
+        // cout<<"Rutinas vencidas:\n";
+        // cout<<menu1.
+        // cout<<"Ingrese una tecla y enter para continuar...\n";
+		// cin>>x;
         }break;
 
 
         case 5:{
-        char x;
-        cout<<"Digita el ID de la rutina\n";
-        cin>>rutina;
-        cout<<"Ingrese una tecla y enter para continuar...\n";
-		cin>>x;
+        // char x;
+        // cout<<"Digita el ID de la rutina\n";
+        // cin>>rutina;
+        // cout<<"Ingrese una tecla y enter para continuar...\n";
+		// cin>>x;
         }break;
 
 
         case 6:{
-        char x;
-        cout<<"Digita el ID del Socio\n";
-        cin>>cedulaSocio;
-        cout<<"Nombre del socio:\n";
-        cout<<menu1.BuscarSocio();
-        cout<<"Digite el peso en kilos:\n";
-        cin>>peso;
-        cout<<"Digite la altura en metros:\n";
-        cin>>altura;
-        cout<<"Digite el porcentje de grasa:\n";
-        cin>>porcentajeGrasa;
-        cout<<"Ingrese una tecla y enter para continuar...\n";
-		cin>>x;
+        // char x;
+        // cout<<"Digita el ID del Socio\n";
+        // cin>>cedulaSocio;
+        // cout<<"Nombre del socio:\n";
+        // cout<<menu1.BuscarSocio();
+        // cout<<"Digite el peso en kilos:\n";
+        // cin>>peso;
+        // cout<<"Digite la altura en metros:\n";
+        // cin>>altura;
+        // cout<<"Digite el porcentje de grasa:\n";
+        // cin>>porcentajeGrasa;
+        // cout<<"Ingrese una tecla y enter para continuar...\n";
+		// cin>>x;
         }break;
 
 
         case 7:{
-        char x;
-        cout<<"Digita el ID del Socio\n";
-        cin>>cedulaSocio;
-        cout<<"Nombre del socio:\n";
-        cout<<menu1.BuscarSocio();
-        cout<<"Ingrese una tecla y enter para continuar...\n";
-		cin>>x;
-        }break;}
+        // char x;
+        // cout<<"Digita el ID del Socio\n";
+        // cin>>cedulaSocio;
+        // cout<<"Nombre del socio:\n";
+        // cout<<menu1.BuscarSocio();
+        // cout<<"Ingrese una tecla y enter para continuar...\n";
+		// cin>>x;
+        }break;
         system("cls");
-     }while(opc==8){
-         cout<<"Volviendo\n";
-     }}
+    //  }while(opc==8);
+    //  {
+    //      cout<<"Volviendo\n";
+    //  }}
      case 8:{
         char x;
-         do{
-    cout<<"++++++++++++++++++++++++++++++++++++++\n";
-	cout<<"+            MENU CLASES GRUPALES    +\n";
-	cout<<"++++++++++++++++++++++++++++++++++++++\n";
-    cout << "1-  Creacion de la clase grupal\n";
-    cout << "2-  Visualizacion de las clases grupales\n";
-    cout << "3-  Matriculas Socio\n";
-    cout << "4-  Regresar al menú principal\n";
-    cin>>opc;
-    system("cls");
- switch(opc){
-     case 1:{
-        char x;
-        cout<<"Digite el Dia que desea crear la clase(L,M,K,J,V,S,D):\n";
-        cout<<"|Lunes=L|Martes=M|Miercoles=K|Jueves=J|Viernes=V|Sabado=V|Domingo=D|\n";
-        cin>>Dia;
-        cout<<"Digite la Hora que desea para la clase, en base al horario de 24 horas\n";
-        cin>>hora;
-        menu1.crearGrupal(Dia,hora);
+     
+        //  do{
+        cout<<"++++++++++++++++++++++++++++++++++++++\n";
+        cout<<"+            MENU CLASES GRUPALES    +\n";
+        cout<<"++++++++++++++++++++++++++++++++++++++\n";
+        cout << "1-  Creacion de la clase grupal\n";
+        cout << "2-  Visualizacion de las clases grupales\n";
+        cout << "3-  Matriculas Socio\n";
+        cout << "4-  Regresar al menú principal\n";
+        cin>>opc;
+        system("cls");
+        switch(opc){
+            case 1:{
+                // char x;
+                // cout<<"Digite el Dia que desea crear la clase(L,M,K,J,V,S,D):\n";
+                // cout<<"|Lunes=L|Martes=M|Miercoles=K|Jueves=J|Viernes=V|Sabado=V|Domingo=D|\n";
+                // cin>>Dia;
+                // cout<<"Digite la Hora que desea para la clase, en base al horario de 24 horas\n";
+                // cin>>hora;
+                // menu1.crearGrupal(Dia,hora);
 
 
 
-        
-        cout<<"Digite el salón deseado(A,B,C):\n";
-        cin>>salon;
-        cout<<menu1.
-        cout<<"Ingrese una tecla y enter para continuar...\n";
-		cin>>x;
-     }break;
+                
+                // cout<<"Digite el salón deseado(A,B,C):\n";
+                // cin>>salon;
+                // cout<<menu1.
+                // cout<<"Ingrese una tecla y enter para continuar...\n";
+                // cin>>x;
+            }break;
 
 
-      case 2:{
-        char x;
-        cout<<"Digite el ID de la clase:\n";
-        cin>>leccion;
-        cout<<menu1.
-        cout>>"Socios Matriculados:\n";
-        cout<<menu1.
-        cout<<"Ingrese una tecla y enter para continuar...\n";
-		cin>>x;
-     }break;
+            case 2:{
+                // char x;
+                // cout<<"Digite el ID de la clase:\n";
+                // cin>>leccion;
+                // cout<<menu1.
+                // cout>>"Socios Matriculados:\n";
+                // cout<<menu1.
+                // cout<<"Ingrese una tecla y enter para continuar...\n";
+                // cin>>x;
+            }break;
 
 
-      case 3:{
-        char x;
-        cout<<"Digite el ID de la clase:\n";
-        cin>>leccion;
-        cout<<menu1.
-        cout<<"Digita el ID del socio:\n";
-        cin>>cedulaSocio;
-        cout<<"Nombre dek socio:\n";
-        cout<<menu1.BuscarSocio();
+            case 3:{
+                // char x;
+                // cout<<"Digite el ID de la clase:\n";
+                // cin>>leccion;
+                // cout<<menu1.
+                // cout<<"Digita el ID del socio:\n";
+                // cin>>cedulaSocio;
+                // cout<<"Nombre dek socio:\n";
+                // cout<<menu1.BuscarSocio();
 
-        cout<<"Ingrese una tecla y enter para continuar...\n";
-		cin>>x;
-     }break;}
-     }while (opc==4){
-         cout<<"Volviendo\n";
-     } 
+                // cout<<"Ingrese una tecla y enter para continuar...\n";
+                // cin>>x;
+            }break;}
+    //  }while (opc==4);
      system("cls");
-    }while(opc==9){
-        cout<<"Adios\n";
-    }
-    return 0;
+     }
+        }
+    // }while(opc==9){
+        // cout<<"Adios\n";
+    // }
+    // return 0;
 }
- 
+    
+     }}}

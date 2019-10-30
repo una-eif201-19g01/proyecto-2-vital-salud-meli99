@@ -21,7 +21,7 @@ public:
 	bool eliminarFinal();
 	string obtenerDatosVehiculo(int);
     bool eliminarPorId(int n);
-	bool insertarSocioPorId(int n, Personas *socio);
+	bool insertarSocioPorId(int n, Personas socio);
 	int totalNodos();
 
 	string getListaSocios();

@@ -5,7 +5,7 @@
     cedulaSocio=0;
     correoSocio="_";
     telefonoSocio=0;
-    fechaIncripcionSocio=0;
+    fechaInscripcionSocio=0;
     pesoSocio=0;
     masaCorporalSocio=0;
     masaMuscularSocio=0;   
@@ -74,16 +74,16 @@
 
 //metodos
     string Personas::toString(){
-        streamstring per;
-        per<<"El nombre del socio es: "<<nombreSocio<<endl;
-        per<<"El ID del socio es: "<<cedulaSocio<<endl;
-        per<<"El correo del socio es: "<<correoSocio<<endl;
-        per<<"El telefono del socio es: "<<telefonoSocio<<endl;
-        per<<"La fecha de Inscripcion del socio es: "<<fechaInscripcionSocio<<endl;
-        per<<"El peso del Socio es: "<<pesoSocio<<endl;
-        per<<"La masa corporal del Socio es: "<<masaCorporalSocio<<endl;
-        per<<"La masa muscular del Socio es: "<<masaMuscularSocio<<endl;
-        return per.str();
+        // streamstring per;
+        // per<<"El nombre del socio es: "<<nombreSocio<<endl;
+        // per<<"El ID del socio es: "<<cedulaSocio<<endl;
+        // per<<"El correo del socio es: "<<correoSocio<<endl;
+        // per<<"El telefono del socio es: "<<telefonoSocio<<endl;
+        // per<<"La fecha de Inscripcion del socio es: "<<fechaInscripcionSocio<<endl;
+        // per<<"El peso del Socio es: "<<pesoSocio<<endl;
+        // per<<"La masa corporal del Socio es: "<<masaCorporalSocio<<endl;
+        // per<<"La masa muscular del Socio es: "<<masaMuscularSocio<<endl;
+        // return per.str();
     }
     float Personas::perdidaGrasa(int pesoActual){
         perdidaDeGrasa = pesoSocio - pesoActual;

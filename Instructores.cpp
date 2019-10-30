@@ -3,21 +3,23 @@
 
 Instructores::Instructores() {
     cantidadSocios = 0;
-    tamano = 99;
+    tamano = 10;
     id = 0;
 
-    // for (int i = 0; i<tamano; i++) {
-    //     vectorSocios[i] = Personas per();
-    // }
+    for (int i = 0; i<tamano; i++) {
+        Personas per = Personas();
+        vectorSocios[i] = &per;
+    }
 }
 
 Instructores::Instructores(int cantidad, int tamano) {
     cantidadSocios = cantidad;
     Instructores::tamano = tamano;
 
-    // for (int i = 0; i<tamano; i++) {
-    //     vectorInstructores[i];
-    // }
+    for (int i = 0; i<tamano; i++) {
+        Personas per = Personas();
+        vectorSocios[i] = &per;
+    }
 }
 
 int Instructores::getTamano() {
@@ -77,7 +79,11 @@ void Instructores::setTelefono(int telefono) {
 }
 
 void Instructores::asignarSocio(Personas socio) {
-    vectorSocios[cantidadSocios] = &socio;
+    std::cout << "AQUII";
+    vectorSocios[0] = &socio;
+
+
+    std::cout << vectorSocios[0]->getSociosPorInstructor("Paul");
     cantidadSocios++;
 }
 
@@ -127,21 +133,25 @@ string Instructores::toString() {
 }
 
 string Instructores::getSocios(string nombreInstructor) {
+    string str;
+
     for (int i = 0; i < cantidadSocios; i++) {
-        if (vectorSocios[i] != nullptr) {
-            return vectorSocios[i]->getSociosPorInstructor(nombreInstructor);
-        }
+        // if (vectorSocios[i] != nullptr) {
+            str+=vectorSocios[0]->getSociosPorInstructor(nombreInstructor);
+            str+="\n";
+            return str;
+        // }
     }
     return NULL;
 }
 
-Personas** Instructores::getSocioPorId(int cedula) {
+Personas* Instructores::getSocioPorId(int cedula) {
     for (int i = 0; i < cantidadSocios; i++) {
-        if (vectorSocios[i] != nullptr) {
+        // if (vectorSocios[i] != nullptr) {
             if (vectorSocios[i]->getcedulaSocio() == cedula) {
-                return &vectorSocios[i];
+                return vectorSocios[i];
             }
-        }
+        // }
     }
     return NULL;
 }

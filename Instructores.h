@@ -10,7 +10,7 @@ class Instructores{
         int tamano;
         int cantidadSocios;
         // Personas *vectorInstructores; 
-        Personas **vectorSocios;
+        Personas *vectorSocios[10];
         string nombre;
         int id;
         int cedula;
@@ -44,7 +44,7 @@ class Instructores{
         int getCantidad();
         void setCantidad(int cantidad);
         void asignarSocio(Personas socio);
-        Personas** getSocioPorId(int cedula);
+        Personas* getSocioPorId(int cedula);
         // void addSocio(Personas socio);
 
         string buscaSocio(int cedulaSocio);
