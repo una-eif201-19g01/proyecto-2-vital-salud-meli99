@@ -25,6 +25,9 @@ NodoSocios.o: NodoSocios.cpp
 NodoRutinas.o: NodoRutinas.cpp
 	g++ -g -std=c++11 -Wall -c NodoRutinas.cpp
 
+NodoSalones.o : NodoSalones.cpp
+	g++ -g -std=c++11 -Wall -c NodoSalones.cpp
+
 ListaInstructores.o: ListaInstructores.cpp
 	g++ -g -std=c++11 -Wall -c ListaInstructores.cpp
 
@@ -33,6 +36,9 @@ ListaSocios.o : ListaSocios.cpp
 
 ListaRutinas.o: ListaRutinas.cpp
 	g++ -g -std=c++11 -Wall -c ListaRutinas.cpp
+
+ListaSalones.o: ListaSalones.cpp
+	g++ -g -std=c++11 -Wall -c ListaSalones.cpp
 
 clean:
 	rm *.o Gimnasio

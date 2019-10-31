@@ -13,7 +13,7 @@ class Salones{
         
  public:
  //hacer una lista de salones.
-       Personas();      
+       Salones();      
 
         void setnombreSalon(string nombreSalon);
         string getnombreSalon();
