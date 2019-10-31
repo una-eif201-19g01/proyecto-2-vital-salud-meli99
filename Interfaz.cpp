@@ -153,9 +153,9 @@ int opc;
 
      case 7:{
         //  do{
-        // cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
-        // cout<<"Menu Instructores\n";
-        // cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+        cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+        cout<<"Menu Instructores\n";
+        cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
         cout<<"1 - Socios por instructor\n";
         cout<<"2 - Asignar rutina a socio\n";
         cout<<"3 - Detalle Socio\n";
@@ -176,16 +176,13 @@ int opc;
         cout<<"Digite el id del instructor:\n";
         cin>>idInstructor;
         cout<<"Lista de socios:\n";
-
-        //agregar la lista de socios
         cout<<listaInstructores->getListaSociosPorInstructor(idInstructor);
-   
          cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
         }break;
 
 
-         case 2:{
+        case 2:{
         char x;
         cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
         cout<<"Asignación de rutina\n";
@@ -247,11 +244,11 @@ int opc;
 
         case 4:{
         // char x;
-        // cout<<"Digita el ID del Instructor\n";
+        // cout<<"Digita el ID del Instructor:\n";
         // cin>>cedulaInstruct;
         //cout<<"Digite la fecha actual\n";
         //cin>>fechaActual;
-        // cout<<"Nombre del socio:\n";
+        // cout<<"Nombre del Instructor:\n";
 
 
         // cout<<menu1.BuscarInstructor();
@@ -279,12 +276,8 @@ int opc;
         // cout<<"Digita el ID del Socio\n";
         // cin>>cedulaSocio;
         // cout<<"Nombre del socio:\n";
-
-
-        // cout<<menu1.BuscarSocio();
-
-
-
+       //Personas tempSocio = listaInstructores->getSocioPorId(cedulaSocio);
+        //cout << tempSocio.getnombreSocio() + "\n\n";
         // cout<<"Digite el peso en kilos:\n";
         // cin>>peso;
         // cout<<"Digite la altura en metros:\n";
@@ -304,10 +297,8 @@ int opc;
         // cout<<"Digita el ID del Socio\n";
         // cin>>cedulaSocio;
         // cout<<"Nombre del socio:\n";
-
-
-        // cout<<menu1.BuscarSocio();
-
+        //Personas tempSocio = listaInstructores->getSocioPorId(cedulaSocio);
+        //cout<<tempSocio.getnombreSocio() + "\n\n";
         //cout<<"Datos del socio :\n";
         //cout<<menu1.toString();
         // cout<<"Ingrese una tecla y enter para continuar...\n";
