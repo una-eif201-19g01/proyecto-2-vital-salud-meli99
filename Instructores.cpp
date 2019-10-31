@@ -71,22 +71,6 @@ void Instructores::asignarSocio(Personas socio) {
     listaSocios->insertarFinal(socio);
 }
 
-// void Instructores::addSocio(Personas socio) {
-//     cantidadSocios++;
-
-//     vectorInstructores[cantidadSocios] = socio;
-// }
-
-// string Instructores::getInstructor() {
-//     for (int i = 0; i < tamano; i++) {
-//         vectorInstructores[i] = "Nombre: " + nombre + "\nCédula: " + cedula + "\nSocios: ";
-//         for (int j = 0; j < cantidadSocios; j++) {
-//             socio[]
-//         }
-//     }
-// }
-
-
  string Instructores::buscaSocio(int cedulaSocio) {
      string str = listaSocios->getSocioPorId(cedulaSocio).getnombreSocio();
     //  if (str != NULL) {
@@ -96,20 +80,6 @@ void Instructores::asignarSocio(Personas socio) {
     //  }
      
  }
-
-//  float Instructores::mejoresPesos() {
-//      float mayorPerdida = 0;
-
-//     for (int i = 0; i < cantidadSocios; i++) {
-//         int perdidaActual = vectorSocios[i]->getPerdidaGrasa();
-        
-//         if (perdidaActual > mayorPerdida) {
-//             mayorPerdida = perdidaActual;
-//         }
-//     }
-
-//      return mayorPerdida;
-//  }
 
 string Instructores::toString() {
     string str;

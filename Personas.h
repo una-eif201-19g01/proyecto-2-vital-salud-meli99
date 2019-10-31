@@ -2,10 +2,13 @@
 #define PERSONAS_H
 
 #include<iostream>
+#include "ListaRutinas.h"
 using namespace std;
 
 class Personas{
    private:
+        ListaRutinas* listaRutinas;
+
         float altura;
         float porcentajeGrasa;
         string nombreSocio;
@@ -57,5 +60,6 @@ class Personas{
         string toString();
         float perdidaGrasa(int pesoActual);
         string getSociosPorInstructor(string nombreInstructor);
+        void addRutina(Rutina socio);
 };
 #endif

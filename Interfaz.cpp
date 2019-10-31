@@ -1,4 +1,5 @@
 #include "Interfaz.h"
+#include "Rutinas.h"
 #include <iostream>
 using namespace std;
 
@@ -186,43 +187,52 @@ int opc;
 
 
          case 2:{
-        char x;
-        cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
-        cout<<"Asignación de rutina\n";
-        cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
-        cout<<"Digite el ID del Socio:\n";
-        cin>>cedulaSocio;
-        cout<<"Nombre del socio:\n";
+            Rutina tempRutina = Rutina();
 
-        Personas tempSocio = listaInstructores->getSocioPorId(cedulaSocio);
-        cout << tempSocio.getnombreSocio() + "\n\n";
+            char x;
+            cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+            cout<<"Asignación de rutina\n";
+            cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+            cout<<"Digite el ID del Socio:\n";
+            cin>>cedulaSocio;
+            cout<<"Nombre del socio:\n";
+
+            Personas tempSocio = listaInstructores->getSocioPorId(cedulaSocio);
+            cout << tempSocio.getnombreSocio() + "\n\n";
 
 
-        cout<<"Rutina numero:\n";
-        // cout<<menu1.asignaRutina;
-        // cout<<"Fecha de Inicio:\n";
-        // cin>>fechaInicio;
-        // cout<<"Fecha de Vencimiento:\n";
-        // cin>>fechaVencimiento;
-        // cout<<"Objetivo:\n";
-        // cin>>objetivo;
-        // cout<<"Parte del cuerpo:(1-Pierna, 2-Pecho, 3-espalda, 4-hombro ,5-tríceps, 6-biceps, 7-trapecio, 8-antebrazo)\n";
-        // cin>>parteCuerpo;
-        // cout<<"Nombre del Ejercicio:\n";
-        // cin>>nombreEjercicio;
-        // cout<<"Cantidad de Series:\n";
-        // cin>>series;
-        // cout<<"Cantidad de Repeticiones:\n";
-        // cin>>repeticiones;
-        // rutinario.setfechaInicio(fechaInicio);
-        // rutinario.setfechaVencimeinto(fechaVencimiento);
-        // rutinario.setobjetivo(objetivo);
-        // rutinario.setparteCuerpo(parteCuerpo);
-        // rutinario.setnombreEjercicio(nombreEjercicio);
-        // rutinario.setseries(series);
-        // rutinario.setrepeticiones(repeticiones);
-        // cout<<"Ingrese una tecla y enter para continuar...\n";
-		// cin>>x;
+            cout<<"Rutina numero:\n";
+            tempRutina.agregaCodigo();
+            cout << to_string(tempRutina.getCodigo()) + "\n";
+            cout<<"Fecha de Inicio:\n";
+            cin>>fechaInicio;
+            cout<<"Fecha de Vencimiento:\n";
+            cin>>fechaVencimiento;
+            cout<<"Objetivo:\n";
+            cin>>objetivo;
+            cout<<"Parte del cuerpo:(1-Pierna, 2-Pecho, 3-espalda, 4-hombro ,5-tríceps, 6-biceps, 7-trapecio, 8-antebrazo)\n";
+            cin>>parteCuerpo;
+            cout<<"Nombre del Ejercicio:\n";
+            cin>>nombreEjercicio;
+            cout<<"Cantidad de Series:\n";
+            cin>>series;
+            cout<<"Cantidad de Repeticiones:\n";
+            cin>>repeticiones;
+
+            tempRutina.setfechaInicio(fechaInicio);
+            tempRutina.setfechaVencimiento(fechaVencimiento);
+            tempRutina.setobjetivo(objetivo);
+            tempRutina.setparteCuerpo(parteCuerpo);
+            tempRutina.setnombreEjercicio(nombreEjercicio);
+            tempRutina.setseries(series);
+            tempRutina.setrepeticiones(repeticiones);
+
+            tempSocio.addRutina(tempRutina);
+
+            cout<<"Añadido! \n\n";
+            cout<<tempRutina.toStringRutina();
+            cout<<"Ingrese una tecla y enter para continuar...\n";
+            cin>>x;
         }break;
 
 

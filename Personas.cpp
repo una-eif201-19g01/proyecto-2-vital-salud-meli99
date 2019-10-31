@@ -1,6 +1,8 @@
 #include "Personas.h"
 
     Personas::Personas(){
+    listaRutinas = new ListaRutinas();
+
     altura=0;
     porcentajeGrasa=0;
     nombreSocio="_";
@@ -113,4 +115,8 @@ string Personas::getSociosPorInstructor(string nombreInstructor) {
     str+=to_string(cedulaSocio) + "\t" + nombreSocio + "\t" + nombreInstructor; 
 
     return str;
+}
+
+void Personas::addRutina(Rutina rutina) {
+    listaRutinas->insertarFinal(rutina);
 }

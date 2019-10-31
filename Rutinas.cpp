@@ -14,55 +14,67 @@ Rutina::Rutina(){
 void Rutina::setfechaInicio(float fechaInicio){
     Rutina::fechaInicio=fechaInicio;
 }
+
 float Rutina::getfechaInicio(){
-    reutnr fechaInicio;
+    return fechaInicio;
 }
+
 void Rutina::setfechaVencimiento(float fechaVencimiento){
     Rutina::fechaVencimiento=fechaVencimiento;
 }
+
 float Rutina::getfechaVencimiento(){
-    return fechaVencimiento
+    return fechaVencimiento;
 }
+
 void Rutina::setobjetivo(string objetivo){
-Rutina::objetivo=objetivo;
+    Rutina::objetivo=objetivo;
 }
+
 string Rutina::getobjetivo(){
     return objetivo;
 }
+
 void Rutina::setparteCuerpo(int parteCuerpo){
-Rutina::parteCuerpo=parteCuerpo;
+    Rutina::parteCuerpo=parteCuerpo;
 }
+
 int Rutina::getparteCuerpo(){
     return parteCuerpo;
 }
+
 void Rutina::setnombreEjercicio(string nombreEjercicio){
-Rutina::nombreEjercicio=nombreEjercicio;
+    Rutina::nombreEjercicio=nombreEjercicio;
 }
+
 string Rutina::getnombreEjercicio(){
     return nombreEjercicio;
 }
+
 void Rutina::setseries(int series){
-Rutina:: series=series;
+    Rutina:: series=series;
 }
+
 int Rutina::getseries(){
     return series;
 }
+
 void Rutina::setrepeticiones(int repeticiones){
-Rutina::repeticiones=repeticiones;
+    Rutina::repeticiones=repeticiones;
 }
+
 int Rutina::getrepeticiones(){
     return repeticiones;
 }  
 
-int getCodigo(){
+int Rutina::getCodigo(){
     codigo = codigo + 1;
     return codigo;
 }
-void setCodigo(int codigo){
-    Rutina::Codigo=codigo;
-} 
 
-        
+void Rutina::setCodigo(int codigo){
+    Rutina::codigo=codigo;
+} 
 
     //metodos
 
@@ -77,9 +89,7 @@ void setCodigo(int codigo){
         }
 
     void Rutina::agregaCodigo(){
-           if(asignaRutina==num){
-               set.Codigo(num);
-            }
+           codigo = asignaRutina();
         }
         bool Rutina::AumentarDiminuirMasa(int numero){
             if(numero==1){
@@ -96,15 +106,15 @@ void setCodigo(int codigo){
             e<<"La cantidad de Repeticiones es de :"<<repeticiones<<endl;
             e<<"La cantidad de series es de :"<<series<<endl;
             e<<"El numero de la parte del Cuerpo es :"<<parteCuerpo<<endl;
-            e<<"Parte del cuerpo:(1-Pierna, 2-Pecho, 3-espalda, 4-hombro ,5-tríceps, 6-biceps, 7-trapecio, 8-antebrazo)"<<endl
+            e<<"Parte del cuerpo:(1-Pierna, 2-Pecho, 3-espalda, 4-hombro ,5-tríceps, 6-biceps, 7-trapecio, 8-antebrazo)"<<endl;
             e<<"El objetivo de esta rutina es :"<<objetivo<<endl;
             e<<"El nombre de Ejercicio es :"<<nombreEjercicio<<endl;
             return e.str();
         }
 
-        string vencimientoRutinas(float fechaActual){
-        if(fecha Vencimiento<=fechaActual){
-            return codigo;
+        string Rutina::vencimientoRutinas(float fechaActual){
+        if(fechaVencimiento<=fechaActual){
+            return to_string(codigo);
         }else{
             return "NO ha vencido";
         }

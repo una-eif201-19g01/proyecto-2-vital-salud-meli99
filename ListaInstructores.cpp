@@ -146,7 +146,6 @@ bool ListaInstructores::insertarSocioPorId(int n, Personas socio){
                 actual->getInstructor().asignarSocio(socio);
 				return true;
             }
-            
         }
     }
     return false;

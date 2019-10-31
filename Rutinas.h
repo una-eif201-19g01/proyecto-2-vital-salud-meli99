@@ -1,25 +1,23 @@
 #ifndef RUTINAS_H
 #define RUTINAS_H
 
-#include<iostream>
-#include <stdlib.h>
-#include <time.h>
+#include <iostream>
+#include <sstream> 
 using namespace std;
 
 class Rutina{
-   private:
-    int codigo;
-    float fechaInicio:
+  private:
+    float fechaInicio;
     float fechaVencimiento;
+    int codigo;
     string objetivo;
     int parteCuerpo;
     string nombreEjercicio;
     int series;
     int repeticiones;
-     
-        
+
  public:
-       Rutina();
+         Rutina();
        
        //set & get
 void setfechaInicio(float fechaInicio);
@@ -49,13 +47,10 @@ void setCodigo(int codigo);
         
 
     //metodos
-        bool AumentarDiminuirMasa();
+        bool AumentarDiminuirMasa(int numero);
         string toStringRutina();
         int asignaRutina();
         void agregaCodigo();
         string vencimientoRutinas(float fechaActual);
 };
 #endif
-
-
-

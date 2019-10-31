@@ -48,7 +48,7 @@ bool ListaSocios::eliminarFinal() {
 
 
 void ListaSocios::insertarFinal(Personas &_socio){
-	act = prim;
+	prim = act;
     if (prim == nullptr) {
         prim = new NodoSocios(_socio, nullptr);
     } 

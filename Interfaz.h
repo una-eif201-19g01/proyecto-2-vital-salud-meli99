@@ -7,7 +7,7 @@
 // #include "ListaSocios.h"
 // #include "Grupal.h"
 // #include "Horario.cpp"
-// #include "Rutinas.h"
+#include "Rutinas.h"
 
 class Interfaz {
     private:
