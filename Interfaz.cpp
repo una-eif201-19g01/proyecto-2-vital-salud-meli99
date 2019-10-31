@@ -186,19 +186,19 @@ int opc;
 
 
          case 2:{
-        // char x;
-        // cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
-        // cout<<"Asignación de rutina\n";
-        // cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
-        // cout<<"Digite el ID  dek Socio:\n";
-        // cin>>cedulaSocio;
-        // cout<<"Nombre del socio:\n";
+        char x;
+        cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+        cout<<"Asignación de rutina\n";
+        cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+        cout<<"Digite el ID del Socio:\n";
+        cin>>cedulaSocio;
+        cout<<"Nombre del socio:\n";
+
+        Personas tempSocio = listaInstructores->getSocioPorId(cedulaSocio);
+        cout << tempSocio.getnombreSocio() + "\n\n";
 
 
-        // cout<<menu1.Buscarsocio;
-
-
-        // cout<<"Rutina numero:\n";
+        cout<<"Rutina numero:\n";
         // cout<<menu1.asignaRutina;
         // cout<<"Fecha de Inicio:\n";
         // cin>>fechaInicio;
@@ -214,13 +214,13 @@ int opc;
         // cin>>series;
         // cout<<"Cantidad de Repeticiones:\n";
         // cin>>repeticiones;
-        /*rutinario.setfechaInicio(fechaInicio);
-        rutinario.setfechaVencimeinto(fechaVencimiento);
-        rutinario.setobjetivo(objetivo);
-        rutinario.setparteCuerpo(parteCuerpo);
-        rutinario.setnombreEjercicio(nombreEjercicio);
-        rutinario.setseries(series);
-        rutinario.setrepeticiones(repeticiones);*/
+        // rutinario.setfechaInicio(fechaInicio);
+        // rutinario.setfechaVencimeinto(fechaVencimiento);
+        // rutinario.setobjetivo(objetivo);
+        // rutinario.setparteCuerpo(parteCuerpo);
+        // rutinario.setnombreEjercicio(nombreEjercicio);
+        // rutinario.setseries(series);
+        // rutinario.setrepeticiones(repeticiones);
         // cout<<"Ingrese una tecla y enter para continuar...\n";
 		// cin>>x;
         }break;

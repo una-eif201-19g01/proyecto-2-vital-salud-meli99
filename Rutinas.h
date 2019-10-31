@@ -8,18 +8,19 @@ using namespace std;
 
 class Rutina{
    private:
-   int codigo;
-   float fechaInicio:
-   float fechaVencimiento;
-   string objetivo;
-   int parteCuerpo;
-   string nombreEjercicio;
-   int series;
-   int repeticiones;
+    int codigo;
+    float fechaInicio:
+    float fechaVencimiento;
+    string objetivo;
+    int parteCuerpo;
+    string nombreEjercicio;
+    int series;
+    int repeticiones;
      
         
  public:
        Rutina();
+       
        //set & get
 void setfechaInicio(float fechaInicio);
 float getfechaInicio();

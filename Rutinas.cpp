@@ -1,15 +1,15 @@
 #include "Rutinas.h"
 
-       Rutina::Rutina(){
-           codigo=0;
-           fechaInicio=0;
-           fechaVencimiento=0;
-           repeticiones=0;
-           series=0;
-           parteCuerpo=0;
-           objetivo="_";
-           nombreEjercicio="_";
-       }
+Rutina::Rutina(){
+    codigo=0;
+    fechaInicio=0;
+    fechaVencimiento=0;
+    repeticiones=0;
+    series=0;
+    parteCuerpo=0;
+    objetivo="_";
+    nombreEjercicio="_";
+}
     
 void Rutina::setfechaInicio(float fechaInicio){
     Rutina::fechaInicio=fechaInicio;
@@ -55,6 +55,7 @@ int Rutina::getrepeticiones(){
 }  
 
 int getCodigo(){
+    codigo = codigo + 1;
     return codigo;
 }
 void setCodigo(int codigo){
