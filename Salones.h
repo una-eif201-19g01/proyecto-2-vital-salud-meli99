@@ -15,7 +15,7 @@ class Salones{
  //hacer una lista de salones.
        Personas();      
 
-        void setnombreSalon(string nnombreSalon);
+        void setnombreSalon(string nombreSalon);
         string getnombreSalon();
 
         void setcodigo(int codigo);
