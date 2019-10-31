@@ -4,21 +4,22 @@
 #include<string>
 #include "Horario.cpp"
 #include "Personas.h"
-// #include "ListaSocios.h"
-using namespace std;
+#include "ListaSocios.h"
 
 class Grupal{
     private:
     char grupo[10];
     int cantidad;
     int tamano;
+    string matriz;
 
-    Coleccion *horario;
+    Coleccion *coleccion;
         string nombre;
-        string Instructor;
-        char Salon;
-        string Horario;
+        string instructor;
+        string salon;
+        string horario;
         ListaSocios* socios;
+        Coleccion matriz;
 
     public:
         Grupal();
@@ -27,7 +28,7 @@ class Grupal{
         void setInstructor(string Insrtructor);
         string getNombre();
         void setNombre(string Nombre);
-        char getSalon();
+        string getSalon();
         void setSalon(char Salon);
         string getHorario();
         void setHorario(string Horario);
@@ -43,7 +44,7 @@ class Grupal{
         string toStringVectorGrupal();
     
          string toStringGrupal();
-         string crearGrupal(char Dia, int hora);
+         string crearGrupal(char Dia, char hora);
 
 };
 

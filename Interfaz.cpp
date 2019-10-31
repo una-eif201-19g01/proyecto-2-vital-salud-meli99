@@ -234,14 +234,12 @@ int opc;
 
 
         case 3:{
-        // char x;
-        // cout<<"Digita el ID del Socio\n";
-        // cin>>cedulaSocio;
-        // cout<<"Nombre del socio:\n";
-
-
-
-        // cout<<menu1.BuscarSocio();
+        char x;
+        cout<<"Digita el ID del Socio\n";
+        cin>>cedulaSocio;
+        cout<<"Nombre del socio:\n";
+        Personas tempSocio = listaInstructores->getSocioPorId(cedulaSocio);
+        cout << tempSocio.getnombreSocio() + "\n\n";
        
         // cout<<"Clases Grupales:\n";
         // cout<<menu1.toStringGrupal();

@@ -10,31 +10,35 @@ const int horas=12;
 class Coleccion{
 	
 private:
-	int matriz[tam][horas];
+	string matriz[tam][horas];
 public:
 	
 	Coleccion(){
 		for (int i = 0; i<tam; i++)
 		for (int j = 0; j<horas ; j++)
-			matriz[i][j]=0;
+			matriz[i][j]="";
 	}
 	
-	Coleccion(int a){
+	Coleccion(string a){
 		for (int i = 0; i<tam; i++)
 		for (int j = 0; j<horas;j++)
 			matriz[i][j]=a;
 	}
+
+	string getMatriz() {
+		return matriz[tam][horas];
+	}
 	
-	void setPos (int i, int j, int val){
+	void setPos (int i, int j, string val){
 		matriz[i][j] = val;
 	}
 	
-	int getPos (int i, int j){
+	string getPos (int i, int j){
 		return matriz[i][j];
 	}
 	
 	void llenarColeccion() {
-		int valor;
+		string valor;
 		for (int i = 0; i<tam;i++)
 		for (int j = 0; j<horas;j++)
 		{ cout<<"valor["<<i<<"]["<<j<<"]: ";
