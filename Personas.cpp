@@ -100,6 +100,7 @@
         // per<<"La masa corporal del Socio es: "<<masaCorporalSocio<<endl;
         // per<<"La masa muscular del Socio es: "<<masaMuscularSocio<<endl;
         // return per.str();
+        return "";
     }
     float Personas::perdidaGrasa(int pesoActual){
         perdidaDeGrasa = pesoSocio - pesoActual;

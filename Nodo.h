@@ -2,12 +2,13 @@
 #define NODO_H
 
 #include "Instructores.h"
-#include "Personas.h"
+// #include "Personas.h"
+
 using namespace std;
 class Nodo {
 	Nodo* next;
 	Instructores instructor;
-	Personas socio;
+	// Personas socio;
 public:
 	Nodo();
 	Nodo(const Instructores& instructor, Nodo* Next);
@@ -17,8 +18,8 @@ public:
 	void setSocio(const Personas &socio);
 	Nodo *getNext() const;
 	Instructores &getInstructor();
-	Personas &getSocio();
+	// Personas &getSocio();
 	string toString();
-};
+}; 
 
 #endif 

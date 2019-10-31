@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <sstream>
-#include <windows.h>
+// #include <windows.h>
 #include <string.h>
 using namespace std;
 const int tam=7;
@@ -10,7 +10,7 @@ const int horas=12;
 class Coleccion{
 	
 private:
-	string matriz[tam][horas];
+	int matriz[tam][horas];
 public:
 	
 	Coleccion(){

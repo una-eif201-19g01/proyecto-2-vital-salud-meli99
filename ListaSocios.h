@@ -1,20 +1,19 @@
 #ifndef LISTASOCIOS_H
 #define LISTASOCIOS_H
 
-#include "Nodo.h"
-// #include "Personas.h"
-
-using namespace std;
+#include "NodoSocios.h"
+#include "Personas.h"
 
 class ListaSocios {
-	Nodo *actual;
-	Nodo *primero;
+private:
+	NodoSocios *act;
+	NodoSocios *prim;
 public:
 	ListaSocios();
-	void setActual(Nodo *actual);
-	void setPrimero(Nodo *primero);
-	Nodo *getActual()const;
-	Nodo *getPrimero()const;
+	void setActual(NodoSocios *actual);
+	void setPrimero(NodoSocios *primero);
+	NodoSocios *getActual()const;
+	NodoSocios *getPrimero()const;
 	virtual ~ListaSocios();
 	string toString();
 	void insertarFinal(Personas &_socio);
@@ -24,6 +23,7 @@ public:
 
     Personas getSocioPorId(int id);
     string getSocios(string nombreInstrctor);
+	bool existeSocioPorId(int cedula);
 };
 
 #endif

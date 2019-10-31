@@ -3,6 +3,7 @@
 
 Instructores::Instructores() {
     id = 0;
+    listaSocios = new ListaSocios();
 }
 
 Instructores::Instructores(int cantidad, int tamano) {
@@ -117,12 +118,13 @@ string Instructores::toString() {
 }
 
 string Instructores::getSocios(string nombreInstructor) {
-    string str;
-
-    listaSocios->getSocios(nombreInstructor);
+    return listaSocios->getSocios(nombreInstructor);
 }
 
-Personas* Instructores::getSocioPorId(int cedula) {
-    listaSocios->getSocioPorId(cedula);
-    return NULL;
+Personas Instructores::getSocioPorId(int cedula) {
+    return listaSocios->getSocioPorId(cedula);
+}
+
+bool Instructores::existeSocioPorId(int cedula) {
+    return listaSocios->existeSocioPorId(cedula);
 }

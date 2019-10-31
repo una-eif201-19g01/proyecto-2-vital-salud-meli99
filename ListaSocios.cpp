@@ -1,55 +1,42 @@
 #include "ListaSocios.h"
 
 ListaSocios::ListaSocios(){
-	primero=nullptr;
-	actual=nullptr;
+	prim=nullptr;
+	act=nullptr;
 }
 
-void ListaSocios::setActual(Nodo *actual){
-	ListaSocios::actual=actual;
+void ListaSocios::setActual(NodoSocios *actual){
+	ListaSocios::act=actual;
 }
 
-void ListaSocios::setPrimero(Nodo *primero){
-	ListaSocios::primero=primero;
+void ListaSocios::setPrimero(NodoSocios *primero){
+	ListaSocios::prim=primero;
 }
 
-Nodo *ListaSocios::getActual()const{
-	return actual;
+NodoSocios *ListaSocios::getActual()const{
+	return act;
 }
 
-Nodo *ListaSocios::getPrimero()const{
-	return primero;
+NodoSocios *ListaSocios::getPrimero()const{
+	return prim;
 }
 
 ListaSocios::~ListaSocios(){
-	while (primero!= nullptr){
-		actual=primero;
-		primero=primero->getNext();
-		delete (actual);
+	while (prim!= nullptr){
+		act=prim;
+		prim=prim->getNext();
+		delete (act);
 	}
 }
 
-void ListaSocios::insertarFinal(Personas &_socio){
- 	actual = primero;
-    if (primero == nullptr) {
-        primero = new Nodo(_socio, nullptr);
-    } 
-	else {
-        while (actual->getNext() != nullptr) {
-            actual=actual->getNext();
-        }
-        actual->setNext(new Nodo(_socio, nullptr));
-    }
-}
-
 bool ListaSocios::eliminarFinal() {
-	actual=primero;
-	if(primero==nullptr){
+	act=nullptr;
+	if(prim==nullptr){
 		return false;
-	} else if (primero->getNext() == nullptr) {
-		delete primero;
+	} else if (prim->getNext() == nullptr) {
+		delete prim;
 	} else {
-		Nodo* penultimo = actual; //Para no ser el ultimo directamente
+		NodoSocios* penultimo = act; //Para no ser el ultimo directamente
 		while(penultimo->getNext()->getNext()!=nullptr) {
 			penultimo = penultimo->getNext();
 		}
@@ -59,43 +46,71 @@ bool ListaSocios::eliminarFinal() {
 	return true;
 }
 
-string ListaSocios::toString(){
-	string informe;
-	actual=primero;
-	while (actual!=nullptr){
-		informe+=actual->toString();
-		actual=actual->getNext();
-	}
-	return informe;
+
+void ListaSocios::insertarFinal(Personas &_socio){
+	act = prim;
+    if (prim == nullptr) {
+        prim = new NodoSocios(_socio, nullptr);
+    } 
+	else {
+        while (act->getNext() != nullptr) {
+            act=act->getNext();
+        }
+        act->setNext(new NodoSocios(_socio, nullptr));
+    }
 }
+
+// string ListaSocios::toString(){
+// 	string informe;
+// 	act=prim;
+// 	while (act!=nullptr){
+// 		informe+=act->toString();
+// 		act=act->getNext();
+// 	}
+// 	return informe;
+// }
 
 int ListaSocios::totalNodos(){
 	int totalNodos=0;
-	actual=primero;
-	while(actual!=nullptr){
+	act=prim;
+	while(act!=nullptr){
 		totalNodos ++;
-		actual=actual->getNext();
+		act=act->getNext();
 	}
 	return totalNodos;
 }
 
 Personas ListaSocios::getSocioPorId(int id) {
-    actual = primero;
+    // act = prim;
 
-    while(actual!=nullptr) {
-        if(actual->getSocio().getcedulaSocio() == id) {
-            return actual->getSocio();
-        }
-        actual = actual->getNext();
-    }
+    // while(act!=nullptr) {
+    //     if(act->getSocio().getcedulaSocio() == id) {
+    //         return act->getSocio();
+    //     }
+    //     act = act->getNext();
+    // }
+	return prim->getSocio();
 }
 
  string ListaSocios::getSocios(string nombreInstrctor) {
-     actual = primero;
+     act = prim;
      string str = "";
 
-    while(actual!=nullptr) {
-        str += to_string(actual->getSocio().getcedulaSocio()) + "\t" +  actual->getSocio().getnombreSocio() + "\t" + nombreInstrctor + "\n"; 
-        actual = actual->getNext();
+    while(act!=nullptr) {
+        str += to_string(act->getSocio().getcedulaSocio()) + "\t" +  act->getSocio().getnombreSocio() + "\t" + nombreInstrctor + "\n"; 
+        act = act->getNext();
     }
+	return str;
+ }
+
+ bool ListaSocios::existeSocioPorId(int cedula) {
+	act = prim;
+
+    while(act!=nullptr) {
+        if(act->getSocio().getcedulaSocio() == cedula) {
+            return true;
+        }
+        act = act->getNext();
+    }
+	return false;
  }

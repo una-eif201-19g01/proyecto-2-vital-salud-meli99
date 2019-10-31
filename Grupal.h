@@ -3,7 +3,8 @@
 
 #include<string>
 #include "Horario.cpp"
-#include "Persona.h"
+#include "Personas.h"
+// #include "ListaSocios.h"
 using namespace std;
 
 class Grupal{

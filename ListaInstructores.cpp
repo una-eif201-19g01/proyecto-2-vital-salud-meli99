@@ -95,7 +95,7 @@ int ListaInstructores::totalNodos(){
 
 // bool ListaInstructores::eliminarPorId(int n){
 //     actual = primero;
-//     Nodo* temp = primero;
+    // Nodo* temp = primero;
 
 //     if(actual->getVehiculo().getId() == n) {
 //         if (actual->getNext() != nullptr) {
@@ -170,34 +170,46 @@ string ListaInstructores::getListaSocios() {
 
 	while (actual!=nullptr){
 		str+=actual->getInstructor().getSocios(actual->getInstructor().getNombre());
-		str+="\n";
 		actual=actual->getNext();
 	}
 	return str;
 }
 
-Personas* ListaInstructores::getSocioPorId(int cedula) {
+Personas ListaInstructores::getSocioPorId(int cedula) {
 	actual = primero;
 	while (actual!=nullptr){
-		if (actual->getInstructor().getSocioPorId(cedula) != NULL) {
+		if (actual->getInstructor().existeSocioPorId(cedula)) {
 			return actual->getInstructor().getSocioPorId(cedula);
 		}
 	}
-	return nullptr;
 }
 
-string ListaInstructores::mejoresResultadosPerdidaGrasa() {
-	string str = "";
-	string mejorInstructor = "";
-	int mejorPerdida = 0;
+// string ListaInstructores::mejoresResultadosPerdidaGrasa() {
+// 	string str = "";
+// 	string mejorInstructor = "";
+// 	int mejorPerdida = 0;
 
+// 	actual = primero;
+// 	while (actual!=nullptr){
+// 		if (actual->getInstructor().mejoresPesos() > mejorPerdida) {
+// 			mejorInstructor = actual->getInstructor().getNombre();
+// 			mejorPerdida = actual->getInstructor().mejoresPesos();
+// 		}
+// 	}
+
+// 	return mejorInstructor + ": " + to_string(mejorPerdida) + "\n";
+// }
+
+string ListaInstructores::getListaSociosPorInstructor(int id) {
+	string str;
 	actual = primero;
-	while (actual!=nullptr){
-		if (actual->getInstructor().mejoresPesos() > mejorPerdida) {
-			mejorInstructor = actual->getInstructor().getNombre();
-			mejorPerdida = actual->getInstructor().mejoresPesos();
-		}
-	}
 
-	return mejorInstructor + ": " + to_string(mejorPerdida) + "\n";
+	while (actual!=nullptr){
+		if (actual->getInstructor().getCedula() == id) {
+			str+=actual->getInstructor().getSocios(actual->getInstructor().getNombre());
+		}
+		actual=actual->getNext();
+
+	}
+	return str;
 }

@@ -1,43 +1,26 @@
-#include "Nodo.h"
+#include "NodoSocios.h"
 
-Nodo::Nodo() {
+NodoSocios::NodoSocios() {
     next = nullptr;
 }
 
-Nodo::Nodo(const Instructores& veh, Nodo* Next) {
-    Nodo::next = Next;
-    Nodo::instructor = veh;
+NodoSocios::NodoSocios(const Personas& soc, NodoSocios* Next) {
+    NodoSocios::next = Next;
+    NodoSocios::socio = soc;
 }
 
-Nodo::Nodo(const Personas& soc, Nodo* Next) {
-    Nodo::next = Next;
-    Nodo::socio = soc;
+void NodoSocios::setNext(NodoSocios *next) {
+    NodoSocios::next = next;
 }
 
-void Nodo::setNext(Nodo *next) {
-    Nodo::next = next;
+void NodoSocios::setSocio(const Personas &socio) {
+    NodoSocios::socio = socio;
 }
 
-void Nodo::setInstructor(const Instructores &instructor) {
-    Nodo::instructor = instructor;
-}
-
-void Nodo::setSocio(const Personas &socio) {
-    Nodo::socio = socio;
-}
-
-Nodo* Nodo::getNext() const {
+NodoSocios* NodoSocios::getNext() const {
 	return next;
 }
 
-Instructores& Nodo::getInstructor() {
-	return instructor;
-}
-
-Personas& Nodo::getSocio() {
+Personas& NodoSocios::getSocio() {
     return socio;
-}
-
-std::string Nodo::toString() {
-	return instructor.toString();
 }

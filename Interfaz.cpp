@@ -3,7 +3,7 @@
 using namespace std;
 
 Interfaz::Interfaz() {
-    inst = new Instructores();
+    // inst = new Instructores();
     listaInstructores = new ListaInstructores();
 }
 
@@ -129,10 +129,10 @@ int opc;
         cin>>pesoActual;
         cout<<"La perdida de peso es de:\n";
 
-        if (listaInstructores->getSocioPorId(cedulaSocio) != nullptr) {
-            Personas* tempPer = listaInstructores->getSocioPorId(cedulaSocio);
-            // cout<<tempPer->perdidaGrasa(pesoActual);
-        }
+        // if (listaInstructores->getSocioPorId(cedulaSocio) != nullptr) {
+        //     Personas* tempPer = listaInstructores->getSocioPorId(cedulaSocio);
+        //     // cout<<tempPer->perdidaGrasa(pesoActual);
+        // }
 
         cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
@@ -145,7 +145,7 @@ int opc;
         cout<<"Instructor con mejores resultados en pérdida de grasa\n";
         cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
         cout<<"El instructor con mejores resultados es: \n";
-        cout<<listaInstructores->mejoresResultadosPerdidaGrasa();
+        // cout<<listaInstructores->mejoresResultadosPerdidaGrasa();
         cout<<"Ingrese una tecla y enter para continuar...\n";
 		cin>>x;
      }break;
@@ -169,19 +169,19 @@ int opc;
 
         switch (opc){
         case 1:{
-        // char x;
-        // cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
-        // cout<<"Socios por instructor\n";
-        // cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
-        // cout<<"Digite el nombre del instructor:\n";
-        //cin>>nombreInstuct;
-        // cout<<"Lista de socios:\n";
+        char x;
+        cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+        cout<<"Socios por instructor\n";
+        cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+        cout<<"Digite el id del instructor:\n";
+        cin>>idInstructor;
+        cout<<"Lista de socios:\n";
 
         //agregar la lista de socios
-        
+        cout<<listaInstructores->getListaSociosPorInstructor(idInstructor);
    
-        //  cout<<"Ingrese una tecla y enter para continuar...\n";
-		// cin>>x;
+         cout<<"Ingrese una tecla y enter para continuar...\n";
+		cin>>x;
         }break;
 
 
