@@ -1,7 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
 #include <sstream>
-// #include <windows.h>
 #include <string.h>
 using namespace std;
 const int tam=8;
@@ -55,8 +54,6 @@ public:
 		
 		string toStringHorario(){
 			stringstream s;
-			// for (int i = 0; i< tam;i++){
-			// for (int j = 0; j< horas;j++){
 				s<<"|Lunes=L|Martes=M|Miercoles=K|Jueves=J|Viernes=V|Sabado=V|Domingo=D|\n";
 				s<<"--------------------------------------------------------------\n";
 				s<<"|Horario| L | M | K | J | V | S | D |\n";
@@ -86,11 +83,8 @@ public:
 				s<<"|6 p.m. |"  <<matriz[0][11]<<"  |"<<matriz[1][11]<<"  |"<<matriz[2][11]<<"  |"<<matriz[3][11]<<"  |"<<matriz[4][11]<<"  |"<<matriz[5][11]<<"  |"<<matriz[6][11]<<"  |\n";
 				s<<"--------------------------------------------------------------\n";
 				s<<"|7 p.m. |"  <<matriz[0][12]<<"  |"<<matriz[1][12]<<"  |"<<matriz[2][12]<<"  |"<<matriz[3][12]<<"  |"<<matriz[4][12]<<"  |"<<matriz[5][12]<<"  |"<<matriz[6][12]<<"  |\n";
-				s<<"--------------------------------------------------------------\n";
-				
-				
+				s<<"--------------------------------------------------------------\n";				
 			s<<endl;
-			// }}
 			s<<endl;
 			return s.str();
 		}

@@ -13,7 +13,6 @@ public:
 	void setSocio(const Personas &socio);
 	NodoSocios *getNext() const;
 	Personas &getSocio();
-	// string toString();
 };
 
 #endif 

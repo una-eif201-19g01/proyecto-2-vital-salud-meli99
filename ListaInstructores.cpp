@@ -59,20 +59,6 @@ bool ListaInstructores::eliminarFinal() {
 	return true;
 }
 
-// std::string ListaInstructores::obtenerDatosVehiculo(int n) {
-//     string informe;
-// 	actual=primero;
-// 	while (actual!=nullptr){
-//         if(actual->getInstructor().getId() == n) {
-//             informe=actual->toString();
-//             return informe;
-//         }
-// 		actual=actual->getNext();
-// 	}
-//     informe = "Vehiculo con ese ID no fue encontrado\n";
-// 	return informe;
-// }
-
 string ListaInstructores::toString(){
 	string informe;
 	actual=primero;
@@ -93,39 +79,6 @@ int ListaInstructores::totalNodos(){
 	return totalNodos;
 }
 
-// bool ListaInstructores::eliminarPorId(int n){
-//     actual = primero;
-    // Nodo* temp = primero;
-
-//     if(actual->getVehiculo().getId() == n) {
-//         if (actual->getNext() != nullptr) {
-//             primero = temp->getNext();
-//             delete temp;
-//             temp = nullptr;
-//             return true;
-//         } else {
-//             delete(temp);
-//             temp = nullptr;
-//             primero = nullptr;
-//             return false;
-//         }
-//     } else if (actual->getNext() == nullptr) {
-//         return false;
-//     } else {
-//         while (actual->getNext() != nullptr) {
-//             if (actual->getNext()->getInstructor().getId() == n) {
-//                 temp = actual->getNext();
-
-//                 actual->setNext(temp->getNext());
-//                 delete (temp);
-//                 temp = nullptr;
-//                 return true;
-//             }
-//             actual = actual->getNext();
-//         }
-//     }
-//     return false;
-// }
 
 bool ListaInstructores::insertarSocioPorId(int n, Personas socio){
     actual = primero;

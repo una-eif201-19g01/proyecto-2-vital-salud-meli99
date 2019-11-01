@@ -73,11 +73,7 @@ void Instructores::asignarSocio(Personas socio) {
 
  string Instructores::buscaSocio(int cedulaSocio) {
      string str = listaSocios->getSocioPorId(cedulaSocio).getnombreSocio();
-    //  if (str != NULL) {
         return str;
-    //  } else {
-        //  return "Persona con la cedula dada no existe";
-    //  }
      
  }
 
