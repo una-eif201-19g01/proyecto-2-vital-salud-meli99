@@ -1,12 +1,10 @@
 #include "Grupal.h"
 
         Grupal::Grupal(){
-		// coleccion = new Coleccion();
         nombre="_";
         instructor="_";
         salon="_";
         horario="_";
-		// matriz = coleccion->getMatriz();
 		        cantidad=0;
         tamano=10;
         for(int i=0;i<tamano;i++)

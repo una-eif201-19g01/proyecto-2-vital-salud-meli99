@@ -282,37 +282,41 @@ int opc;
 
 
         case 6:{
-        // char x;
-        // cout<<"Digita el ID del Socio\n";
-        // cin>>cedulaSocio;
-        // cout<<"Nombre del socio:\n";
-       //Personas tempSocio = listaInstructores->getSocioPorId(cedulaSocio);
-        //cout << tempSocio.getnombreSocio() + "\n\n";
-        // cout<<"Digite el peso en kilos:\n";
-        // cin>>peso;
-        // cout<<"Digite la altura en metros:\n";
-        // cin>>altura;
-        // cout<<"Digite el porcentje de grasa:\n";
-        // cin>>porcentajeGrasa;
-       // socio.setpesoSocio(peso);
-        //socio.setaltura(altura);
-        //socio.setporcentajeGrasa(porcentajeGrasa);
-        // cout<<"Ingrese una tecla y enter para continuar...\n";
-		// cin>>x;
+        char x;
+        cout<<"Digita el ID del Socio\n";
+        cin>>cedulaSocio;
+        cout<<"Nombre del socio:\n";
+        Personas tempSocio = listaInstructores->getSocioPorId(cedulaSocio);
+        cout << tempSocio.getnombreSocio() + "\n\n";
+        cout<<"Digite el peso en kilos:\n";
+        cin>>peso;
+        cout<<"Digite la altura en metros:\n";
+        cin>>altura;
+        cout<<"Digite el porcentje de grasa:\n";
+        cin>>porcentajeGrasa;
+        socio.setpesoSocio(peso);
+        socio.setaltura(altura);
+        socio.setporcentajeGrasa(porcentajeGrasa);
+        cout<<"El IMC es: \n";
+        cout<<menu1.IMC();
+        cout<<"El estado es de :\n";
+        cout<<menu1.estado();
+        cout<<"Ingrese una tecla y enter para continuar...\n";
+		cin>>x;
         }break;
 
 
         case 7:{
-        // char x;
-        // cout<<"Digita el ID del Socio\n";
-        // cin>>cedulaSocio;
-        // cout<<"Nombre del socio:\n";
-        //Personas tempSocio = listaInstructores->getSocioPorId(cedulaSocio);
-        //cout<<tempSocio.getnombreSocio() + "\n\n";
-        //cout<<"Datos del socio :\n";
-        //cout<<menu1.toString();
-        // cout<<"Ingrese una tecla y enter para continuar...\n";
-		// cin>>x;
+        char x;
+        cout<<"Digita el ID del Socio\n";
+        cin>>cedulaSocio;
+        cout<<"Nombre del socio:\n";
+        Personas tempSocio = listaInstructores->getSocioPorId(cedulaSocio);
+        cout<<tempSocio.getnombreSocio() + "\n\n";
+        cout<<"Datos del socio :\n";
+        cout<<menu1.toString();
+        cout<<"Ingrese una tecla y enter para continuar...\n";
+		cin>>x;
         }break;
         case 8:{
 

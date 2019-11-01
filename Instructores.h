@@ -2,7 +2,6 @@
 #define INSTRUCTORES_H
 
 #include<string>
-// #include "Personas.h"
 #include "ListaSocios.h"
 using namespace std;
 
@@ -10,16 +9,12 @@ class Instructores{
     private:
         int tamano;
         int cantidadSocios;
-        // Personas *vectorInstructores; 
         ListaSocios *listaSocios;
         string nombre;
         int id;
         int cedula;
         string correo;
         int telefono;
-
-        // Personas *vectorInstructores;
-
     public:
         Instructores();
         Instructores(int cantidad, int tamano);
@@ -47,15 +42,9 @@ class Instructores{
         void asignarSocio(Personas socio);
         Personas getSocioPorId(int cedula);
         bool existeSocioPorId(int cedula);
-        // void addSocio(Personas socio);
-
+        
         string buscaSocio(int cedulaSocio);
-        // recorre el arreglo a ver si el nombre de la persona se encuentra o no, en caso de no encontrarse 
-        // le pone que no existe
-        // float mejoresPesos();
-        //si por ejemplo hay dos arreglos, busca en los dos las mejores perdidas de peso, y 
-        //muestra el que tenga resultados mas bajos :)
-        //hay un metodo en Personas que muestra la perdida de peso 
+      
 
 
 };

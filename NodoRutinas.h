@@ -14,7 +14,6 @@ public:
 	void setRutina(const Rutina &rutina);
 	NodoRutinas *getNext() const;
 	Rutina &getRutina();
-	// string toString();
 }; 
 
 #endif 

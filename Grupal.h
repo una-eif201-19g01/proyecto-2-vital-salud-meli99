@@ -13,13 +13,11 @@ class Grupal{
     int tamano;
     string matriz;
 
-    // Coleccion *coleccion;
         string nombre;
         string instructor;
         string salon;
         string horario;
         ListaSocios* socios;
-        // Coleccion matriz;
 
     public:
         Grupal();

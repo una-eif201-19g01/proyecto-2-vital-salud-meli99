@@ -66,5 +66,7 @@ class Personas{
         string getSociosPorInstructor(string nombreInstructor);
         void addRutina(Rutina socio);
         string toStringGetRutinas();
+        float IMC();
+        string estado();
 };
 #endif
