@@ -129,3 +129,40 @@ string Personas::getSociosPorInstructor(string nombreInstructor) {
 void Personas::addRutina(Rutina rutina) {
     listaRutinas->insertarFinal(rutina);
 }
+float IMC(){
+     int IMC=0;
+    IMC=((pesoSocio)/altura*altura);
+    return IMC;
+}
+string estado(){
+    int IMC=float IMC();
+    if(IMC<18.5){
+        return "Bajo Peso";
+    }else{
+    if(18.5<=IMC<=24.9){
+        return "Normal";
+    }else{
+        if(25<=IMC<=29.9){
+            return "Sobrepeso";
+        }else{
+            if(30<=IMC<=34.9){
+                return "Obesidad 1";
+            }else{
+                if(35<=IMC<=39.9){
+                    return "Obesidad 2";
+                }else{
+                    if(40<=IMC<=49.9){
+                        return "Obesidad 3";
+                    }else
+                    {
+                        return "Obesidad 4";
+                    }
+                    
+                }
+            }
+        }
+    }
+    
+    }
+    
+}
