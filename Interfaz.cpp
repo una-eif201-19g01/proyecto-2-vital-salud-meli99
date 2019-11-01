@@ -346,9 +346,9 @@ int opc;
                  cout<<"Digite el nombre del instructor para la clase grupal: \n";
                 cin>>nombreInstructorGrupal;
                 grupo->setInstructor(nombreInstructorGrupal);
-                 cout<<"Digite el salón deseado(A,B,C):\n";
-                 cin>>Salon;
-                 grupo->setSalon(Salon);
+                cout<<"Digite el salón deseado(A,B,C):\n";
+                cin>>Salon;
+                grupo->setSalon(Salon);
 	            cout<<"\n";
                 cout<<"Digite el dia y la hora: \n";
                 cin>>horario;
@@ -372,33 +372,33 @@ int opc;
 
 
             case 2:{
-                // char x;
-                // cout<<"Digite el nombre de la clase:\n";
-                // cin>>nombreGrupal;
-                //cout<<menu1.toStringHorario();
-                //cout<<menu1.toStringGrupal(); 
-                // cout>>"Socios Matriculados:\n";
-                // cout<<menu1.toStringVectorGrupal();
-                // cout<<"Ingrese una tecla y enter para continuar...\n";
-                // cin>>x;
+                char x;
+                cout<<"Digite el nombre de la clase:\n";
+                cin>>nombreGrupal;
+                grupo->setNombre(nombreGrupal);
+                cout<<grupo->toStringGrupal(); 
+                cout<<"Socios Matriculados:\n";
+                cout<<grupo->toStringVectorGrupal();
+                cout<<"Ingrese una tecla y enter para continuar...\n";
+                cin>>x;
             }break;
 
 
             case 3:{
-                // char x;
-                // cout<<"Digite el nombre de la clase:\n";
-                // cin>>nombreGrupal;
-	            //cout<<"Digita la cantidad de socios que deseas matricular: ";
-	            //cin>>cantidad;
-	            //cont=0;
-	            //while(cont<cantidad){
-		        //cout<<"Digita el socio "<<cont+1<<": ";
-		        //cin>>nombreSocio;
-		        //grupo->insertarSocio(nombreSocio);
-		        //cont++;
-	            //}
-                // cout<<"Ingrese una tecla y enter para continuar...\n";
-                // cin>>x;
+                char x;
+                cout<<"Digite el nombre de la clase:\n";
+                cin>>nombreGrupal;
+	            cout<<"Digita la cantidad de socios que deseas matricular: ";
+	            cin>>cantidad;
+	            cont=0;
+	            while(cont<cantidad){
+		        cout<<"Digita el socio "<<cont+1<<": ";
+		        cin>>nombreSocio;
+		        grupo->insertarSocio(nombreSocio);
+		        cont++;
+	            }
+                cout<<"Ingrese una tecla y enter para continuar...\n";
+                cin>>x;
             }break;}
     //  }while (opc==4);
      system("cls");

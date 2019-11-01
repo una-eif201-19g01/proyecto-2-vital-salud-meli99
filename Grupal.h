@@ -8,7 +8,7 @@
 
 class Grupal{
     private:
-    char grupo[10];
+    string grupo[10];
     int cantidad;
     int tamano;
     string matriz;

@@ -10,7 +10,7 @@
 		        cantidad=0;
         tamano=10;
         for(int i=0;i<tamano;i++)
-            grupo[i]=' ';
+            grupo[i]="";
         }
        
         string Grupal::getInstructor(){
@@ -448,11 +448,11 @@
     int Grupal::getTamano(){
         return tamano;
     }
-	// void Grupal::insertarSocio(string nombreSocio){
-	// 	if (cantidad < tamano)
-	// 		grupo[cantidad]=elem; 
-	// 	setCantidad(cantidad+1); 
-	// }
+	void Grupal::insertarSocio(string nombreSocio){
+		if (cantidad < tamano)
+			grupo[cantidad]=nombreSocio; 
+		setCantidad(cantidad+1); 
+	}
 	string Grupal::toStringVectorGrupal(){
 		stringstream x;
 		x<<"Grupo: \n";
