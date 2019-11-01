@@ -212,3 +212,12 @@ string ListaInstructores::getListaSociosPorInstructor(int id) {
 	}
 	return str;
 }
+
+Instructores ListaInstructores::getInstrictorPorIdSocio(int id){
+	actual = primero;
+	while (actual!=nullptr){
+		if (actual->getInstructor().existeSocioPorId(id)) {
+			return actual->getInstructor();
+		}
+	}
+}

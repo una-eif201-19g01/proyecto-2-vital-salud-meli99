@@ -20,6 +20,7 @@ class Personas{
         int masaCorporalSocio;
         int masaMuscularSocio;
         float perdidaDeGrasa;
+        int idInstructor;
  public:
        Personas();  
 
@@ -54,6 +55,9 @@ class Personas{
         int getmasaMuscularSocio();
 
         float getPerdidaGrasa();
+
+        int getIdInstructor();
+        void setIdInstructor(int id);
         
 
     //metodos

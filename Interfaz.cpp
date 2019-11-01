@@ -6,6 +6,7 @@ using namespace std;
 Interfaz::Interfaz() {
     // inst = new Instructores();
     listaInstructores = new ListaInstructores();
+    grupo = new Grupal();
 }
 
 Interfaz menu1;
@@ -36,8 +37,6 @@ int opc;
     system("cls");
     switch(opc){
      case 1:{
-        
-
         char x;
         cout<<"++++++++++++++++++++++++++++++++++++++\n";
         cout<<"Solicituda de nuevos socios\n";
@@ -60,6 +59,7 @@ int opc;
         socio.setcorreoSocio(correoSocio);
         socio.settelefonoSocio(telefonoSocio);
         socio.setfechaInscripcionSocio(fechainscripcionSocio);
+        socio.setIdInstructor(idInstructor);
 
         if (listaInstructores->insertarSocioPorId(idInstructor, socio)) {
             cout<<"Socio Agregado\n";
@@ -239,9 +239,13 @@ int opc;
         cin>>cedulaSocio;
         cout<<"Nombre del socio:\n";
         Personas tempSocio = listaInstructores->getSocioPorId(cedulaSocio);
-        cout << tempSocio.getnombreSocio() + "\n\n";
-       
-        // cout<<"Clases Grupales:\n";
+        cout << tempSocio.getnombreSocio() + "\n";
+
+        cout<<"Nombre del instructor:\n";
+        Instructores tempInst = listaInstructores->getInstrictorPorIdSocio(cedulaSocio);  
+        cout << tempInst.getNombre() + "\n";
+
+        cout<<"Clases Grupales:\n";
         // cout<<menu1.toStringGrupal();
         // cout<<"Historial de rutinas:\n";
         // cout<<menu1.toStringRutina();
@@ -312,7 +316,10 @@ int opc;
         // cout<<"Ingrese una tecla y enter para continuar...\n";
 		// cin>>x;
         }break;
-        system("cls");
+        case 8:{
+
+        }break;
+        }
     //  }while(opc==8);
     //  {
     //      cout<<"Volviendo\n";
@@ -332,33 +339,35 @@ int opc;
         system("cls");
         switch(opc){
             case 1:{
-                // char x;
-                //cout<<"Digite el nombre de la clase grupal: \n";
-                //cin>>nombreGrupal;
-                //grupo.setNombre(nombreGrupal);
-                 //cout<<"Digite el nombre del instructor para la clase grupal: \n";
-                //cin>>nombreInstructorGrupal;
-                //grupo.setInstructor(nombreInstructorGrupal);
-                 //cout<<"Digite el salón deseado(A,B,C):\n";
-                 //cin>>Salon;
-                 //grupo.setSalon(Salon);
-                 //cout<<"Digita el tamaño que deseas para el grupo: ";
-	            //cin>>tam;
-	            // Grupal grupo(tam);
-	            //cout<<"\n";
-                //cout<<"Digite el dia y la hora: \n";
-                //cin>>horario;
-                // grupo.setHorario(horario)  
-                //cout<<menu1.toStringGrupal();             
-                // cout<<"Digite el Dia que desea crear la clase(L,M,K,J,V,S,D):\n";
-                // cout<<"|Lunes=L|Martes=M|Miercoles=K|Jueves=J|Viernes=V|Sabado=V|Domingo=D|\n";
-                // cin>>Dia;
-                // cout<<"Digite la Hora que desea para la clase, en base al horario de 24 horas\n";
-                // cin>>hora;
-                // grupo.crearGrupal(Dia,hora);
-                // cout<<"Ingrese una tecla y enter para continuar...\n";
-                // cin>>x;
-            
+                char x;
+                cout<<"Digite el nombre de la clase grupal: \n";
+                cin>>nombreGrupal;
+                grupo->setNombre(nombreGrupal);
+                 cout<<"Digite el nombre del instructor para la clase grupal: \n";
+                cin>>nombreInstructorGrupal;
+                grupo->setInstructor(nombreInstructorGrupal);
+                 cout<<"Digite el salón deseado(A,B,C):\n";
+                 cin>>Salon;
+                 grupo->setSalon(Salon);
+	            cout<<"\n";
+                cout<<"Digite el dia y la hora: \n";
+                cin>>horario;
+                grupo->setHorario(horario) ; 
+                cout<<grupo->toStringGrupal();         
+
+                cout<<"Digite el Dia que desea crear la clase(L,M,K,J,V,S,D):\n";
+                cout<<"|Lunes=L|Martes=M|Miercoles=K|Jueves=J|Viernes=V|Sabado=V|Domingo=D|\n";
+                cin>>Dia;
+                cout<<"Digite la Hora que desea para la clase, en base al horario de 24 horas\n";
+                cin>>hora;
+                grupo->crearGrupal(Dia,hora);
+
+                Coleccion col = Coleccion(grupo->getMatriz());
+                cout<<col.toStringHorario();
+                cout<<"Ingrese una tecla y enter para continuar...\n";
+                cin>>x;
+
+
             }break;
 
 
@@ -385,7 +394,7 @@ int opc;
 	            //while(cont<cantidad){
 		        //cout<<"Digita el socio "<<cont+1<<": ";
 		        //cin>>nombreSocio;
-		        //grupo.insertarSocio(nombreSocio);
+		        //grupo->insertarSocio(nombreSocio);
 		        //cont++;
 	            //}
                 // cout<<"Ingrese una tecla y enter para continuar...\n";
@@ -401,4 +410,4 @@ int opc;
     // return 0;
 }
     
-     }}}
+     }}

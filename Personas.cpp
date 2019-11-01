@@ -12,7 +12,8 @@
     fechaInscripcionSocio=0;
     pesoSocio=0;
     masaCorporalSocio=0;
-    masaMuscularSocio=0;   
+    masaMuscularSocio=0; 
+    idInstructor = 0;;  
     }     
 
     void Personas::setporcentajeGrasa(float porcentajeGrasa){
@@ -87,6 +88,14 @@
 
     float Personas::getPerdidaGrasa() {
         return perdidaDeGrasa;
+    }
+
+    int Personas::getIdInstructor(){
+        return idInstructor;
+    }
+
+    void Personas::setIdInstructor(int id) {
+        idInstructor = id;
     }
     
 

@@ -2,7 +2,7 @@
 #define GRUPAL_H
 
 #include<string>
-#include "Horario.cpp"
+// #include "Horario.cpp"
 #include "Personas.h"
 #include "ListaSocios.h"
 
@@ -13,13 +13,13 @@ class Grupal{
     int tamano;
     string matriz;
 
-    Coleccion *coleccion;
+    // Coleccion *coleccion;
         string nombre;
         string instructor;
         string salon;
         string horario;
         ListaSocios* socios;
-        Coleccion matriz;
+        // Coleccion matriz;
 
     public:
         Grupal();
@@ -34,12 +34,12 @@ class Grupal{
         void setHorario(string Horario);
         
 
-        Grupal();
         Grupal(int n);
         ~Grupal();
         void setCantidad(int can);
         int getCantidad();
         int getTamano();
+        string getMatriz();
         void insertarSocio(string nombreSocio);
         string toStringVectorGrupal();
     

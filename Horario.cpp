@@ -4,8 +4,8 @@
 // #include <windows.h>
 #include <string.h>
 using namespace std;
-const int tam=7;
-const int horas=12;
+const int tam=8;
+const int horas=13;
 
 class Coleccion{
 	
@@ -25,8 +25,14 @@ public:
 			matriz[i][j]=a;
 	}
 
+	Coleccion(string mat[tam][horas]){
+		for (int i = 0; i<tam; i++)
+		for (int j = 0; j<horas;j++)
+			matriz[i][j]=mat[i][j];
+	}
+
 	string getMatriz() {
-		return matriz[tam][horas];
+		return matriz[tam-1][horas-1];
 	}
 	
 	void setPos (int i, int j, string val){
@@ -49,8 +55,8 @@ public:
 		
 		string toStringHorario(){
 			stringstream s;
-			for (int i = 0; i< tam;i++){
-			for (int j = 0; j< horas;j++){
+			// for (int i = 0; i< tam;i++){
+			// for (int j = 0; j< horas;j++){
 				s<<"|Lunes=L|Martes=M|Miercoles=K|Jueves=J|Viernes=V|Sabado=V|Domingo=D|\n";
 				s<<"--------------------------------------------------------------\n";
 				s<<"|Horario| L | M | K | J | V | S | D |\n";
@@ -84,7 +90,7 @@ public:
 				
 				
 			s<<endl;
-			}}
+			// }}
 			s<<endl;
 			return s.str();
 		}

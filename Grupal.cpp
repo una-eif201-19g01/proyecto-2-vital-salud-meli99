@@ -1,19 +1,23 @@
 #include "Grupal.h"
 
         Grupal::Grupal(){
-		coleccion = new Coleccion();
+		// coleccion = new Coleccion();
         nombre="_";
         instructor="_";
         salon="_";
         horario="_";
-		matriz = coleccion->getMatriz();
+		// matriz = coleccion->getMatriz();
+		        cantidad=0;
+        tamano=10;
+        for(int i=0;i<tamano;i++)
+            grupo[i]=' ';
         }
        
         string Grupal::getInstructor(){
             return instructor;
         }
         void Grupal::setInstructor(string Insrtructor){
-            Grupal::instructor=instructor;
+            Grupal::instructor=Insrtructor;
         }
         string Grupal::getNombre(){
             return nombre;
@@ -33,6 +37,9 @@
         void Grupal::setHorario(string Horario){
             Grupal::horario=Horario;
         }
+		string Grupal::getMatriz(){
+			return matriz;
+		}
     
          string Grupal::toStringGrupal(){
              stringstream grupo;
@@ -44,7 +51,7 @@
          }
 
         string Grupal::crearGrupal(char Dia, char hora){
-			string matriz[7][12];
+			string matriz[8][13];
             do{
 		if((Dia=='L')&&(hora==7)){
 		matriz[0][0]=nombre;    
@@ -419,44 +426,39 @@
 		}}}}}
 	}}}}}}}}}}}
     return "Clase grupal colocada";
-            }while((hora<=20)||(hora>=6)){ 
+            }while((hora<=20)||(hora>=6));
                 return "NO es una hora valida";
-            }
+            
 }
-	Grupal::Grupal(){
-        cantidad=0;
-        tamano=50;
-        for(int i=0;i<tamano;i++)
-            grupo[i]=' ';
-    }
+
     Grupal::Grupal(int n){
         cantidad=0;
         tamano=n;
         for(int i=0;i<tamano;i++)
-            frase[i]=' ';
+            grupo[i]=' ';
     }
     Grupal::~Grupal(){}
-    void setCantidad(int can){
+    void Grupal::setCantidad(int can){
         if((can<tamano)&&(can>0))
             cantidad=can;
     }
-    int Gruapl::getCantidad(){
+    int Grupal::getCantidad(){
         return cantidad;
     }
     int Grupal::getTamano(){
         return tamano;
     }
-	void Grupal::insertarSocio(string nombreSocio){
-		if (cantidad < tamano);
-			frase[cantidad]=elem; 
-		setCantidad(cantidad+1); 
-	}
-	string toStringVectorGrupal(){
+	// void Grupal::insertarSocio(string nombreSocio){
+	// 	if (cantidad < tamano)
+	// 		grupo[cantidad]=elem; 
+	// 	setCantidad(cantidad+1); 
+	// }
+	string Grupal::toStringVectorGrupal(){
 		stringstream x;
 		x<<"Grupo: \n";
 		x<<getNombre();
 		for(int i=0;i<cantidad;i++){
-		x<<"["<<frase[i]<<"]";}
+		x<<"["<<grupo[i]<<"]";}
 		return x.str();
 	}
 
