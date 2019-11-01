@@ -65,5 +65,6 @@ class Personas{
         float perdidaGrasa(int pesoActual);
         string getSociosPorInstructor(string nombreInstructor);
         void addRutina(Rutina socio);
+        string toStringGetRutinas();
 };
 #endif

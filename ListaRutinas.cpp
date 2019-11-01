@@ -143,3 +143,15 @@ string ListaRutinas::getListaSociosPorInstructor(int id) {
 	// }
 	return str;
 }
+
+string ListaRutinas::toStringGetRutinas(){
+	string str;
+	actual = primero;
+
+	while(actual!=nullptr){
+		str += actual->getRutina().toStringRutina();
+		str+="\n";
+		actual=actual->getNext();
+	}
+	return str;
+}

@@ -129,3 +129,7 @@ string Personas::getSociosPorInstructor(string nombreInstructor) {
 void Personas::addRutina(Rutina rutina) {
     listaRutinas->insertarFinal(rutina);
 }
+
+string Personas::toStringGetRutinas() {
+    return listaRutinas->toStringGetRutinas();
+}

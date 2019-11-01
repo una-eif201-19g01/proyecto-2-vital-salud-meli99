@@ -25,6 +25,7 @@ public:
 	string getListaSocios();
 	string getListaInstructores();
 	string getListaSociosPorInstructor(int id);
+	string toStringGetRutinas();
 	// string mejoresResultadosPerdidaGrasa();
 };
 

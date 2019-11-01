@@ -246,27 +246,28 @@ int opc;
         cout << tempInst.getNombre() + "\n";
 
         cout<<"Clases Grupales:\n";
-        // cout<<menu1.toStringGrupal();
-        // cout<<"Historial de rutinas:\n";
-        // cout<<menu1.toStringRutina();
-        // cout<<"Ingrese una tecla y enter para continuar...\n";
-		// cin>>x;
+        cout<<grupo->toStringGrupal();
+        cout<<"Historial de rutinas:\n";
+        cout<<tempSocio.toStringGetRutinas();
+        cout<<"Ingrese una tecla y enter para continuar...\n";
+		cin>>x;
         }break;
 
 
         case 4:{
-        // char x;
-        // cout<<"Digita el ID del Instructor:\n";
-        // cin>>cedulaInstruct;
-        // cout<<"Nombre del Instructor:\n";
-        getInstructorPorIdInstructor
-        Instructor tempInstructor = listaInstructores->getInstructorPorIdInstructor(id);
-        //cout<<"Digite la fecha actual\n";
-        //cin>>fechaActual;
-        // cout<<"Rutinas vencidas:\n";
+        char x;
+        cout<<"Digita el ID del Instructor:\n";
+        cin>>cedulaInstruct;
+        cout<<"Nombre del Instructor:\n";
+        Instructores tempInstructor = listaInstructores->getInstructorPorIdInstructor(cedulaInstruct);
+        cout<<tempInstructor.getNombre();
+        
+        cout<<"Digite la fecha actual\n";
+        cin>>fechaActual;
+        cout<<"Rutinas vencidas:\n";
         // cout<<menu1.vencimientoRutinas(fechaActual);
-        // cout<<"Ingrese una tecla y enter para continuar...\n";
-		// cin>>x;
+        cout<<"Ingrese una tecla y enter para continuar...\n";
+		cin>>x;
         }break;
 
 
