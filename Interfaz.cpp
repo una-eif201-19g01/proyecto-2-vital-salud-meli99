@@ -258,14 +258,11 @@ int opc;
         // char x;
         // cout<<"Digita el ID del Instructor:\n";
         // cin>>cedulaInstruct;
+        // cout<<"Nombre del Instructor:\n";
+        getInstructorPorIdInstructor
+        Instructor tempInstructor = listaInstructores->getInstructorPorIdInstructor(id);
         //cout<<"Digite la fecha actual\n";
         //cin>>fechaActual;
-        // cout<<"Nombre del Instructor:\n";
-
-
-        // cout<<menu1.BuscarInstructor();
-
-
         // cout<<"Rutinas vencidas:\n";
         // cout<<menu1.vencimientoRutinas(fechaActual);
         // cout<<"Ingrese una tecla y enter para continuar...\n";
