@@ -155,3 +155,15 @@ string ListaRutinas::toStringGetRutinas(){
 	}
 	return str;
 }
+
+string ListaRutinas::vencimientoRutinas(float fechaActual){
+	string str;
+	actual = primero;
+
+	while(actual!=nullptr){
+		str += actual->getRutina().vencimientoRutinas(fechaActual);
+		str+="\n";
+		actual=actual->getNext();
+	}
+	return str;
+}

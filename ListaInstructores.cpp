@@ -136,21 +136,22 @@ Personas ListaInstructores::getSocioPorId(int cedula) {
 	}
 }
 
-// string ListaInstructores::mejoresResultadosPerdidaGrasa() {
-// 	string str = "";
-// 	string mejorInstructor = "";
-// 	int mejorPerdida = 0;
+string ListaInstructores::mejoresResultadosPerdidaGrasa() {
+	string str = "";
+	string mejorInstructor = "";
+	int mejorPerdida = 0;
 
-// 	actual = primero;
-// 	while (actual!=nullptr){
-// 		if (actual->getInstructor().mejoresPesos() > mejorPerdida) {
-// 			mejorInstructor = actual->getInstructor().getNombre();
-// 			mejorPerdida = actual->getInstructor().mejoresPesos();
-// 		}
-// 	}
+	actual = primero;
+	while (actual!=nullptr){
+		// if (actual->getInstructor().mejoresPesos() > mejorPerdida) {
+			mejorInstructor = actual->getInstructor().getNombre();
+			// mejorPerdida = actual->getInstructor().mejoresPesos();
+		// }
+		actual = actual->getNext();
+	}
 
-// 	return mejorInstructor + ": " + to_string(mejorPerdida) + "\n";
-// }
+	return mejorInstructor + ": " + to_string(mejorPerdida) + "\n";
+}
 
 string ListaInstructores::getListaSociosPorInstructor(int id) {
 	string str;

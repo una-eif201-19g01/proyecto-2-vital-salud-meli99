@@ -68,5 +68,6 @@ class Personas{
         string toStringGetRutinas();
         float IMC();
         string estado();
+        string vencimientoRutinas(float fechaActual);
 };
 #endif

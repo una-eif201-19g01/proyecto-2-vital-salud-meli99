@@ -26,6 +26,7 @@ public:
 	string getListaInstructores();
 	string getListaSociosPorInstructor(int id);
 	string toStringGetRutinas();
+	string vencimientoRutinas(float fechaActual);
 	// string mejoresResultadosPerdidaGrasa();
 };
 
