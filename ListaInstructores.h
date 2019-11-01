@@ -29,6 +29,7 @@ public:
 	Personas getSocioPorId(int cedula);
 	string getListaSociosPorInstructor(int id);
 	Instructores getInstrictorPorIdSocio(int id);
+	Instructores getInstructorPorIdInstructor(int id);
 	// string mejoresResultadosPerdidaGrasa();
 };
 

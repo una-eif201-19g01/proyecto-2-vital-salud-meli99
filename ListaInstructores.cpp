@@ -221,3 +221,12 @@ Instructores ListaInstructores::getInstrictorPorIdSocio(int id){
 		}
 	}
 }
+
+Instructores ListaInstructores::getInstructorPorIdInstructor(int id){
+	actual = primero;
+	while (actual!=nullptr){
+		if (actual->getInstructor().getId() == id) {
+			return actual->getInstructor();
+		}
+	}
+}
