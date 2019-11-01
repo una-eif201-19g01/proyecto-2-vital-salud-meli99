@@ -306,16 +306,16 @@ int opc;
 
 
         case 7:{
-        // char x;
-        // cout<<"Digita el ID del Socio\n";
-        // cin>>cedulaSocio;
-        // cout<<"Nombre del socio:\n";
-        //Personas tempSocio = listaInstructores->getSocioPorId(cedulaSocio);
-        //cout<<tempSocio.getnombreSocio() + "\n\n";
-        //cout<<"Datos del socio :\n";
-        //cout<<menu1.toString();
-        // cout<<"Ingrese una tecla y enter para continuar...\n";
-		// cin>>x;
+        char x;
+        cout<<"Digita el ID del Socio\n";
+        cin>>cedulaSocio;
+        cout<<"Nombre del socio:\n";
+        Personas tempSocio = listaInstructores->getSocioPorId(cedulaSocio);
+        cout<<tempSocio.getnombreSocio() + "\n\n";
+        cout<<"Datos del socio :\n";
+        cout<<menu1.toString();
+        cout<<"Ingrese una tecla y enter para continuar...\n";
+		cin>>x;
         }break;
         case 8:{
 
