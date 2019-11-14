@@ -93,13 +93,3 @@ string ListaSalones::getListaSociosPorInstructor(int id) {
 	return str;
 }
 
-string ListaSalones::toStringGetRutinas(){
-	string str;
-	actual = primero;
-
-	while(actual!=nullptr){
-		
-		actual=actual->getNext();
-	}
-	return str;
-}
